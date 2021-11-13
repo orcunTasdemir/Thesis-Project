@@ -5,8 +5,13 @@ from agent import Agent
 from food import Food
 from matplotlib import colors, pyplot
 
+
+def read_integers(filename):
+    with open(filename) as f:
+        return [int(x) for x in f]   
+
 #library for the visualization purposes
-def visualize(game: Game):
+def visualizeGame(game: Game):
     """Takes a field and visualizes
     it with matplotlib
 
@@ -28,18 +33,19 @@ def visualize(game: Game):
     #the coordinate is unpopulated, an agent, or a food
     for i in range(0,size):
         for j in range(0,size):
-            if field.array[i,j] == None: # empty
+            if field.array[i][j] == None: # empty
                 pass # leave 0.0 in population cell
-            elif isinstance(field.array[i,j], Agent): #if agent
-                floatMatrix[i][j] = 1.0 # 1.0 means agent
-            elif isinstance(field.array[i,j], Food): #if food
-                floatMatrix[i][j] = 2.0 # 2.0 means food
+            #WHAT IS HAPPENING HERE
+            elif isinstance(field.array[i][j], Agent): #if agent
+                floatMatrix[j][i] = 1.0 # 1.0 means agent
+            elif isinstance(field.array[i][j], Food): #if food
+                floatMatrix[j][i] = 2.0 # 2.0 means food
 
 
     #using colors from matplotlib, define a color map
     colormap = colors.ListedColormap(["lightgrey","blue","green"])
     # define figure size using pyplot
-    pyplot.figure(figsize = (12,12))
+    pyplot.figure(figsize = (8,8))
     # using pyplot add a title
     pyplot.title("First generation (blue = Agents, green = food)",
                 fontsize = 24)
@@ -55,3 +61,20 @@ def visualize(game: Game):
     pyplot.show()
 
     return True
+
+def visualizePopulation(output_file):
+    population = read_integers(output_file)
+    # define figure size using pyplot
+    pyplot.figure(figsize = (8,8))
+    # using pyplot add a title
+    pyplot.title("Population over cycles",
+                fontsize = 24)
+    # using pyplot add x and y labels
+    pyplot.xlabel("cycles", fontsize = 20)
+    pyplot.ylabel("Population", fontsize = 20)
+    # adjust x and y axis ticks, using pyplot
+    pyplot.xticks(fontsize = 16)
+    pyplot.yticks(fontsize = 16)
+    # use .imshow() method from pyplot to visualize agent locations
+    pyplot.plot(population)
+    pyplot.show()

@@ -1,6 +1,7 @@
 
+#This is how we create food
 
-class Food:
+class Food():
     #init method is the constructor for the food
     def __init__(self, energy  : int = 50):
         """Food constructor
