@@ -11,8 +11,8 @@ from matplotlib import colors, pyplot
 
 
 #create a game with the field and agents we have now
-game = Game(field = Field(100), foodArray = [], agents = dict(), environment_type = "Super-Harsh")
-print(game.environment_type)
+game = Game(field = Field(100), agents = dict(), environment_type = "Temperate")
+# print(game.environment_type)
 
 def run_simulations(game: Game, num_agents : int = 150, cycles : int = 20000, num_of_sims : int = 1):
 
@@ -21,9 +21,11 @@ def run_simulations(game: Game, num_agents : int = 150, cycles : int = 20000, nu
     #populate the field with the agents
     game.populate()
     #put food on the field
-    game.put_food()
+    game.put_food(True)
 
     print(game)
+
+
 
     print("##########::SIMULATION::##########")
     for x in range(num_of_sims):
@@ -31,7 +33,18 @@ def run_simulations(game: Game, num_agents : int = 150, cycles : int = 20000, nu
     print(game.agents)
     visualizeGame(game)
 
-run_simulations(game, 10, 399, 1)
-#Visualzie population
+run_simulations(game, 1, 600, 1)
+# #Visualize population
 visualizePopulation("output/output_0.out")
 
+# game = Game(field = Field(2), agents = dict(), environment_type = "Harsh")
+# #create the agents  
+# game.init_agents(1)
+# #populate the field with the agents
+# game.populate()
+# #put food on the field
+# game.put_food(True)
+
+# print(game.agents['agent1'].x)
+# print(game.agents['agent1'].y)
+# print(game.field.array[game.agents['agent1'].x, game.agents['agent1'].y])

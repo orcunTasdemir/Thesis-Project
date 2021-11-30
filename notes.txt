@@ -1,6 +1,6 @@
 
 Check if the food is actually deleting
-
+Turn it into tensors
 
 
 

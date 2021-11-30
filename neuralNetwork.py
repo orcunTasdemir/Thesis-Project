@@ -34,9 +34,6 @@ class NeuralNetwork():
     
 
     def __init__(self):
-        """
-        Print method for the neuralNetwork class
-        """
         self.model = Sequential()
         #adding the input layer, we will also have a 3 dimensional hidden layer
         self.model.add(Dense(5, input_dim=2, activation="relu", kernel_initializer= "random_normal"))
@@ -48,7 +45,7 @@ class NeuralNetwork():
         # data1 = np.array([[1, 2]]) #one units to the right, 2 units down
         # data2 = np.array([-1, -2]) #one units to the left, 2 units up
     
-    def genetic_mutation(self):
+    def genetic_mutation(self): #how do I make this faster, does it need to be faster?
         """
         Genetically mutates the neuralNetwork object so that the offspring has slightly different genome
         """

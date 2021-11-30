@@ -33,13 +33,12 @@ def visualizeGame(game: Game):
     #the coordinate is unpopulated, an agent, or a food
     for i in range(0,size):
         for j in range(0,size):
-            if field.array[i][j] == None: # empty
-                pass # leave 0.0 in population cell
-            #WHAT IS HAPPENING HERE
-            elif isinstance(field.array[i][j], Agent): #if agent
-                floatMatrix[j][i] = 1.0 # 1.0 means agent
+            if field.array[i][j] is None: # empty
+                pass
             elif isinstance(field.array[i][j], Food): #if food
                 floatMatrix[j][i] = 2.0 # 2.0 means food
+            else:               
+                floatMatrix[j][i] = 1.0 # 1.0 means agent
 
 
     #using colors from matplotlib, define a color map

@@ -8,4 +8,4 @@ class Field():
     def __init__(self, size : int = 100):
         self.size = size #the size of the field to be created
         self.array = np.full((size,size), None) #the array that represents each point on the field
-        self.food = None #as we put food to the field we will add
+        #self.food = None #as we put food to the field we will add
