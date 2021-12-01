@@ -57,6 +57,7 @@ def visualizeGame(game: Game):
     # use .imshow() method from pyplot to visualize agent locations
     pyplot.imshow(X = floatMatrix,
                 cmap = colormap)
+    pyplot.savefig("output1.png")
     pyplot.show()
 
     return True
