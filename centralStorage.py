@@ -33,7 +33,7 @@ def run_simulations(game: Game, num_agents : int = 150, cycles : int = 20000, nu
     print(game.agents)
     visualizeGame(game)
 
-run_simulations(game, 10, 300, 1)
+run_simulations(game, 150, 1200, 50)
 # #Visualize population
 visualizePopulation("output/output_0.out")
 
