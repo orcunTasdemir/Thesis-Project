@@ -1,8 +1,6 @@
 import sys
 import numpy as np
 import matplotlib
-import nnfs 
-from nnfs.datasets import spiral_data
 
 #softmax is exponentiation
 # and normalization

@@ -14,7 +14,6 @@ from math import pi
 from game import Game
 import csv
 from itertools import permutations
-import tensorflow as tf
 
 #every 40 cycles 80 percent of the cells are filled with food again
 #energy of every individual is decreased by half a point every cycle

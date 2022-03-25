@@ -1,0 +1,10 @@
+prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+exec_prefix=${prefix}
+includedir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
+libdir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
+
+Name: libdeflate
+Description: Fast implementation of DEFLATE, zlib, and gzip
+Version: 1.10
+Libs: -L${libdir} -ldeflate
+Cflags: -I${includedir}
