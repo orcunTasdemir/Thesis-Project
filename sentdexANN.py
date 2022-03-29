@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-import matplotlib
+#import matplotlib
 
 #softmax is exponentiation
 # and normalization
@@ -46,7 +46,6 @@ class AgentNeuralNetwork:
         return return_val
 
     def genetic_mutation(self):
-        chance_to_mutate = np.random.rand()
         for layer in self.layers:
             for weight in np.nditer(layer.weights, op_flags=['readwrite']):
                 if np.random.randn() > 0:

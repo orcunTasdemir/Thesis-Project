@@ -80,7 +80,7 @@ foodyear = 40
 lifeSpan = 350
 reproductionYear = 50
 
-def simulate(game : Game, cycles = 20000):
+def simulate(game : Game, cycles = 20000, file_num : int = 0):
     """[summary]
 
     Args:
@@ -88,6 +88,9 @@ def simulate(game : Game, cycles = 20000):
         cycles (int, optional): Number of cycles for the simulation to run.
         Defaults to 20000.
     """
+    
+    fds = Agent.facing_directions
+    
     #offspring dictionary because we cannot change the size of the agent
     #dictionary while we are looping through it 
 
@@ -95,22 +98,34 @@ def simulate(game : Game, cycles = 20000):
     #To add the SSS functionality I need to take into account a couple of things,
     #Frist, for every cycle
     #new file writer, starts from
-    fr = fileWriter('output', 'output_', '.out', 0)
+    fr = fileWriter('output', 'output_', '.out', file_num)
     fr.open_file()
 
     #size is here
     size = game.field.size
 
     #output_file =  open("output.txt", "w")
-    agents = game.agents
+    
     offspring_dict = {}
-    offspringName = int(game.num_of_first_generation + 1)
+    offspringName = int(len(game.agents) + 1)
+    print("offspringName", offspringName)
 
     deleted_agents = []
-
+    food_left = False
+    
     for cycle in range(0, cycles):
+        
+        #if there is no food left everything can be different
+        for x in range(100):
+             for y in range(100):
+                if isinstance(game.field.array[x][y], Food):
+                    food_left = True
+        if not food_left:
+            print("There is no food left")
+            
         print("cycle number: ", cycle)
-        agents.update(offspring_dict)
+        
+        game.agents.update(offspring_dict)
         #print("agent_num: ", len(agents))
         offspring_dict = {}
         #delete the agents
@@ -123,7 +138,7 @@ def simulate(game : Game, cycles = 20000):
         #into the agents dictionary
         #empty the dictionary
         #At each cycle I want to record the number of agents, and the number of food left for now
-        fr.write_line(str(len(agents)))
+        fr.write_line(str(len(game.agents)))
 
         #every cycle I have many things to take care of
             #1- check every agent to see if they are dead
@@ -144,6 +159,9 @@ def simulate(game : Game, cycles = 20000):
             game.put_food()
 
         ###########################################################################################
+        
+        agents = game.agents
+        
         for agent_name in agents:
 
             # print('agent_name: ', agent_name)
@@ -176,17 +194,19 @@ def simulate(game : Game, cycles = 20000):
             # print('agent_x: ', agent.x)
             # print('agent_y: ', agent.y)
             
-
-            fd = agent.facing_direction
-
             #initiated as a random food
             distance = -1
             angle = -1
             food_not_found = True
             i = 0
-
+            i_max = 3
+            arr = game.field.array
             #USE scipy.spatial.KDTree TO SPEED THIS UP IF NECESSARY, should I look into this?
             while food_not_found == True:
+                if i > i_max:
+                    distance = 4.24
+                    angle = angle_agent_food(agent, agent_x+3, agent_y+3)
+                    break
                 #for every iteration we didnt find food, I want to update the spiral search value
                 i += 1
                 spiral_updates = spiral_update(i)
@@ -195,13 +215,13 @@ def simulate(game : Game, cycles = 20000):
                     find_y = agent_y + update[1]
                 
                     try:    #lets see if this try statement works 
-                        if isinstance(game.field.array[find_x][find_y], Food):
+                        if isinstance(arr[find_x][find_y], Food):
                             #food found
                             food_not_found = False
                             #food equals to the food in this coordinate
                             #food = game.field.array[find_x][find_y]
                             #find euclidian distance from every food
-                            euclidian_distance = (((find_x - agent_x) ** 2) + ((find_y - agent_y) ** 2)) ** 0.5
+                            distance = (((find_x - agent_x) ** 2) + ((find_y - agent_y) ** 2)) ** 0.5
                             angle = angle_agent_food(agent, find_x, find_y)
                             break
                     except Exception:
@@ -223,9 +243,7 @@ def simulate(game : Game, cycles = 20000):
 
             #ASK ABOUT THIS PART, I WANT TO HAVE SOME SORT OF
             #JUSTIFICATION FOR THIS DECISION??
-            if move_instructions[0][0] < 0.2:
-                move = 0
-            else:
+            if move_instructions[0][0] > 0.2:
                 move = 1
                 #if the second input rounds to zero we want to turn left
                 if move_instructions[0][1] <= 0.4:
@@ -236,15 +254,18 @@ def simulate(game : Game, cycles = 20000):
             #now we can make him move
             #first we need to make him take a turn
             if turn_left:
-                fd = Agent.facing_directions[(agent.facing_direction - 1)%4]
+                agent.facing_direction = fds[(agent.facing_direction - 1)%4]
             elif turn_right:
-                fd = Agent.facing_directions[(agent.facing_direction + 1)%4]
+                agent.facing_direction = fds[(agent.facing_direction + 1)%4]
 
             #we cant empty the last square because there may be other agents
             #on that square, what we can do is that we can utilize our 
             #delete agent function. and write a move_agent_out_function
             # print('is agent here 2: ', game.field.array[agent.x, agent.y])
-            if(len(game.field.array[game.agents[agent_name].x, game.agents[agent_name].y]) == 1):
+            # Chnaged cthis NOTSURE
+            #             if(len(game.field.array[game.agents[agent_name].x, game.agents[agent_name].y]) == 1):
+
+            if(len(game.field.array[agent.x, agent.y]) == 1):
                 game.field.array[agent.x, agent.y] = None
             else:
                 game.move_agent_out(agent_name)
@@ -263,10 +284,7 @@ def simulate(game : Game, cycles = 20000):
             elif fd == 3 and agent_x < (size-1):
                 agent_x = agent_x + move
             
-            #and finally finalize my movement of the agent
-            #update agent's coordinates
-            agent.x = agent_x
-            agent.y = agent_y
+            
             #before putting him in the new coordinates I want to check if there was
             #a food in that same location
             if isinstance(game.field.array[agent_x, agent_y], Food):
@@ -275,9 +293,10 @@ def simulate(game : Game, cycles = 20000):
                 agent.energy += food.energy
                 #I want to delete the food item by giving its coordinates
                 game.delete_food(agent_x, agent_y)
-                game.field.array[agent_x, agent_y] = [agent]
+                #commented below line out as we shouldnt do that: NOTSURE
+                #game.field.array[agent_x, agent_y] = [agent]
             
-            elif game.field.array[agent_x, agent_y] is None:
+            if game.field.array[agent_x, agent_y] is None:
                 game.field.array[agent_x, agent_y] = [agent]
             else:            
                 #if there is already an agent
@@ -285,6 +304,11 @@ def simulate(game : Game, cycles = 20000):
 
             
             #put him on the field
+            #and finally finalize my movement of the agent
+            #update agent's coordinates
+            agent.x = agent_x
+            agent.y = agent_y
+            
             #print("we move the agent here: ({},{})".format(agent.x, agent.y))
             #game.field.array[agent.x, agent.y] = agent
         
@@ -296,41 +320,40 @@ def simulate(game : Game, cycles = 20000):
                 agent.energy = half_energy
                 #create offspring
                 offspring = Agent(half_energy)
+                offspring.neuralNetwork = agent.neuralNetwork
 
 
-                #put him on the field in a random location around a 4x4 box
-                #around its parent
-                offspring_x =  agent.x + random.choice((-4,5))
-                if offspring_x >= (size-1): offspring_x = (size-1)
-                if offspring_x <= 0: offspring_x = 0
-                offspring_y =  agent.y + random.choice((-4,5))
-                if offspring_y >= (size-1): offspring_y = (size-1)
-                if offspring_y <= 0: offspring_y = 0
+                #put him on the field in the same square as the parent
+                offspring.x =  agent.x
+                # if offspring_x >= (size-1): offspring_x = (size-1)
+                # if offspring_x <= 0: offspring_x = 0
+                offspring.y =  agent.y
+                # if offspring_y >= (size-1): offspring_y = (size-1)
+                # if offspring_y <= 0: offspring_y = 0
 
-                 #set the offspring up completely
-                # give his coordinates
-                offspring.x = offspring_x
-                offspring.y = offspring_y
-
-                if isinstance(game.field.array[offspring_x, offspring_y], Food):
-                    food = game.field.array[offspring_x, offspring_y]
-                    #if so, I want to add energy to my agent
-                    offspring.energy += food.energy
-                    #I want to delete the food item
-                    game.delete_food(offspring_x, offspring_y)
-                    game.field.array[offspring_x, offspring_y] = [offspring]
+                 
+                
+                # There wouldnt be food because he is being born to the same square with his parent
+                
+                # if isinstance(game.field.array[offspring_x, offspring_y], Food):
+                #     food = game.field.array[offspring_x, offspring_y]
+                #     #if so, I want to add energy to my agent
+                #     offspring.energy += food.energy
+                #     #I want to delete the food item
+                #     game.delete_food(offspring_x, offspring_y)
+                #     game.field.array[offspring_x, offspring_y] = [offspring]
 
 
-                elif game.field.array[offspring_x, offspring_y] is None:
-                    #it goes in here, the problem isnt this?
-                    game.field.array[offspring_x, offspring_y] = [offspring]
-                else:
+                # elif game.field.array[offspring_x, offspring_y] is None:
+                #     #it goes in here, the problem isnt this?
+                #     game.field.array[offspring_x, offspring_y] = [offspring]
+                # else:
                     #if there is already an agent
-                    game.field.array[offspring_x, offspring_y] = np.append(game.field.array[offspring_x, offspring_y], offspring)
+                game.field.array[offspring.x, offspring.y] = np.append(game.field.array[offspring.x, offspring.y], offspring)
                 
                
                 #give a random facing direction
-                offspring.facing_direction = random.choice(Agent.facing_directions)
+                offspring.facing_direction = random.choice(fds)
                 offspring.neuralNetwork.genetic_mutation()
 
                 #put offspring on the field

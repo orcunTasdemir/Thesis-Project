@@ -5,37 +5,52 @@ from food import Food
 from simulate import simulate
 from visualize import *
 from typing import Dict
-import random
+from random import randint, randrange
 import numpy as np
 from matplotlib import colors, pyplot 
 
 
-#create a game with the field and agents we have now
-game = Game(field = Field(100), agents = dict(), environment_type = "Temperate")
-# print(game.environment_type)
+def run_simulations(num_of_sims : int = 2,
+                    num_agents : int = 50,
+                    cycles : int = 1000,
+                    environment_type : str = "Super-Harsh",
+                    game_type : str = "SSS",
+                    field_size : int = 100):
 
-def run_simulations(game: Game, num_agents : int = 150, cycles : int = 20000, num_of_sims : int = 1):
+    print("########## :: SIMULATION INITIATED :: ##########")
+    for i in range(num_of_sims):
+        file_num = randrange(1000, 10000)
+        #create a game with the field and agents we have now
+        game = Game(field = Field(field_size),
+                        agents = dict(),
+                        environment_type = environment_type,
+                        game_type = game_type)
+        # print(game.environment_type)
 
-    #create the agents  
-    game.init_agents(num_agents)
-    #populate the field with the agents
-    game.populate()
-    #put food on the field
-    game.put_food(True)
+        #create the agents  
+        game.init_agents(num_agents)
+        #populate the field with the agents
+        game.populate()
+        #put food on the field
+        game.put_food(init=True)
 
-    print(game)
+        print(game)
+        
+        simulate(game, cycles, file_num)
+        
+        #print(game.agents)
+        
+        # Visualize the game and save it under the games/ folder
+        visualizeGame(game, file_num)
+        
+        address = "output/output_"+ str(file_num)+ ".out"
+        #graph of the populations
+        visualizePopulation(address, file_num)
+        
 
-
-
-    print("##########::SIMULATION::##########")
-    for x in range(num_of_sims):
-        simulate(game, cycles)
-    print(game.agents)
-    visualizeGame(game)
-
-run_simulations(game, 150, 100, 2)
+run_simulations(1, 150, 700, "Harsh")
 # #Visualize population
-visualizePopulation("output/output_0.out")
+#visualizePopulation("output/output_0.out")
 
 # game = Game(field = Field(2), agents = dict(), environment_type = "Harsh")
 # #create the agents  

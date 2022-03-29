@@ -82,3 +82,11 @@
 +conda-forge/osx-64::liblapacke-3.9.0-13_osx64_openblas
 +conda-forge/osx-64::openblas-0.3.18-openmp_h12da7db_0
 # update specs: ['numpy']
+==> 2022-03-28 18:25:41 <==
+# cmd: /opt/anaconda3/bin/conda install -c conda-forge matplotlib
+# conda version: 4.10.3
+-anaconda/osx-64::ca-certificates-2020.10.14-0
+-anaconda/osx-64::certifi-2020.6.20-py38_0
++conda-forge/osx-64::ca-certificates-2021.10.8-h033912b_0
++conda-forge/osx-64::certifi-2021.10.8-py38h50d1736_1
+# update specs: ['matplotlib']

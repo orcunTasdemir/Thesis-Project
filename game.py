@@ -107,12 +107,15 @@ class Game:
         the given number of agents, placement is random.
         """
         #putting the agents in
-        for i in range(1, len(self.agents)+1):   
+        rangee = len(self.agents)+1
+        field_size = self.field.size
+        
+        for i in range(1, rangee):   
             while True:  
                 #random x coordinate for agent
-                x = random.choice(range(0,self.field.size))
+                x = random.choice(range(0, field_size))
                 #random y coordinate for agent
-                y = random.choice(range(0,self.field.size))
+                y = random.choice(range(0, field_size))
                 
                 #if the spot is empty
                 if self.field.array[x,y] == None:
@@ -121,7 +124,8 @@ class Game:
                     agent.x = x
                     agent.y = y
                     agent.facing_direction = random.choice(Agent.facing_directions) #we choose a random facing direction
-                    #put him on the field inside an array (important)
+                    #put him on the field inside an array (important) so that multiple people can be 
+                    #there in the future
                     self.field.array[x,y] = []
                     self.field.array[x,y].append(agent)
                     break
@@ -167,6 +171,7 @@ class Game:
         #print(f"Environment type is {environment_type}, so {num_of_food} food items were placed in the field at random.")
 
     ##########################################################
+    #CAN THIS BE IMPROVED?
     def delete_agent(self, agent_name : str): #optimal
         """
         Once an agent dies in any possible way, we delete him from the game

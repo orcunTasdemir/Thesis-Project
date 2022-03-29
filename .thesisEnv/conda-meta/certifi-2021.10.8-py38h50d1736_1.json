@@ -1,20 +1,21 @@
 {
-  "build": "py38_0",
-  "build_number": 0,
-  "channel": "https://conda.anaconda.org/anaconda/osx-64",
+  "build": "py38h50d1736_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
   "constrains": [],
   "depends": [
-    "python >=3.8,<3.9.0a0"
+    "python >=3.8,<3.9.0a0",
+    "python_abi 3.8.* *_cp38"
   ],
-  "extracted_package_dir": "/opt/anaconda3/pkgs/certifi-2020.6.20-py38_0",
+  "extracted_package_dir": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1",
   "features": "",
   "files": [
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/PKG-INFO",
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/SOURCES.txt",
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/dependency_links.txt",
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/installed-files.txt",
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/not-zip-safe",
-    "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/installed-files.txt",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/not-zip-safe",
+    "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/top_level.txt",
     "lib/python3.8/site-packages/certifi/__init__.py",
     "lib/python3.8/site-packages/certifi/__main__.py",
     "lib/python3.8/site-packages/certifi/__pycache__/__init__.cpython-38.pyc",
@@ -23,54 +24,54 @@
     "lib/python3.8/site-packages/certifi/cacert.pem",
     "lib/python3.8/site-packages/certifi/core.py"
   ],
-  "fn": "certifi-2020.6.20-py38_0.tar.bz2",
+  "fn": "certifi-2021.10.8-py38h50d1736_1.tar.bz2",
   "license": "ISC",
   "link": {
-    "source": "/opt/anaconda3/pkgs/certifi-2020.6.20-py38_0",
+    "source": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1",
     "type": 1
   },
-  "md5": "d261ef1d968fed736056b3123a929daf",
+  "md5": "c45ff53e0b329fe61b3f0cfdd37fa0fa",
   "name": "certifi",
-  "package_tarball_full_path": "/opt/anaconda3/pkgs/certifi-2020.6.20-py38_0.tar.bz2",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1.tar.bz2",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/PKG-INFO",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/PKG-INFO",
         "path_type": "hardlink",
-        "sha256": "3277899f0653539e3f0e10bdea91f0dfd420debcd0543ebaf877c63235f089f2",
-        "sha256_in_prefix": "3277899f0653539e3f0e10bdea91f0dfd420debcd0543ebaf877c63235f089f2",
-        "size_in_bytes": 3403
+        "sha256": "aa727d647bf19f7c9bcf5062029d2033678146bb83205242485fb7444fb2653a",
+        "sha256_in_prefix": "aa727d647bf19f7c9bcf5062029d2033678146bb83205242485fb7444fb2653a",
+        "size_in_bytes": 3453
       },
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/SOURCES.txt",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/SOURCES.txt",
         "path_type": "hardlink",
         "sha256": "c114f069d008d26b348202e02bfe15105bad6ff7bf233a1a3f874d4889c584b0",
         "sha256_in_prefix": "c114f069d008d26b348202e02bfe15105bad6ff7bf233a1a3f874d4889c584b0",
         "size_in_bytes": 278
       },
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/dependency_links.txt",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/dependency_links.txt",
         "path_type": "hardlink",
         "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
         "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
         "size_in_bytes": 1
       },
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/installed-files.txt",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/installed-files.txt",
         "path_type": "hardlink",
         "sha256": "9002ccae0cbae43c1e5beed55879b1b8d345bc82a5defff700ad7e143f566c84",
         "sha256_in_prefix": "9002ccae0cbae43c1e5beed55879b1b8d345bc82a5defff700ad7e143f566c84",
         "size_in_bytes": 293
       },
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/not-zip-safe",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/not-zip-safe",
         "path_type": "hardlink",
         "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
         "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
         "size_in_bytes": 1
       },
       {
-        "_path": "lib/python3.8/site-packages/certifi-2020.6.20-py3.8.egg-info/top_level.txt",
+        "_path": "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/top_level.txt",
         "path_type": "hardlink",
         "sha256": "28cbb8bd409fb232eb90f6d235d81d7a44bea552730402453bffe723c345ebe5",
         "sha256_in_prefix": "28cbb8bd409fb232eb90f6d235d81d7a44bea552730402453bffe723c345ebe5",
@@ -79,8 +80,8 @@
       {
         "_path": "lib/python3.8/site-packages/certifi/__init__.py",
         "path_type": "hardlink",
-        "sha256": "bb513f0eb4868ff9e71242b956096f12a3fc0fcd0aa6084b5562f403fa6ae350",
-        "sha256_in_prefix": "bb513f0eb4868ff9e71242b956096f12a3fc0fcd0aa6084b5562f403fa6ae350",
+        "sha256": "c56751827b53de3d55f79ce4462a463a0fc0d547c48eed85729ba3872b192d12",
+        "sha256_in_prefix": "c56751827b53de3d55f79ce4462a463a0fc0d547c48eed85729ba3872b192d12",
         "size_in_bytes": 62
       },
       {
@@ -93,8 +94,8 @@
       {
         "_path": "lib/python3.8/site-packages/certifi/__pycache__/__init__.cpython-38.pyc",
         "path_type": "hardlink",
-        "sha256": "fae5f0836bc8746998228df7f7d63ff4a31740adcf4b6f8382dd34c480ab4cb5",
-        "sha256_in_prefix": "fae5f0836bc8746998228df7f7d63ff4a31740adcf4b6f8382dd34c480ab4cb5",
+        "sha256": "0848e3ef9d6121b0bda5ce285f86058a732131734d8ae39b5c0238be92d5c2d5",
+        "sha256_in_prefix": "0848e3ef9d6121b0bda5ce285f86058a732131734d8ae39b5c0238be92d5c2d5",
         "size_in_bytes": 222
       },
       {
@@ -114,9 +115,9 @@
       {
         "_path": "lib/python3.8/site-packages/certifi/cacert.pem",
         "path_type": "hardlink",
-        "sha256": "1a14f6e1fd11efff72e1863f8645f090eec1b616614460c210c3b7e3c13d4b5e",
-        "sha256_in_prefix": "1a14f6e1fd11efff72e1863f8645f090eec1b616614460c210c3b7e3c13d4b5e",
-        "size_in_bytes": 282394
+        "sha256": "fa883829ebb8cd2a602f9b21c1f85de24cf47949d520bceb1828b4cd1cb6906c",
+        "sha256_in_prefix": "fa883829ebb8cd2a602f9b21c1f85de24cf47949d520bceb1828b4cd1cb6906c",
+        "size_in_bytes": 265969
       },
       {
         "_path": "lib/python3.8/site-packages/certifi/core.py",
@@ -129,11 +130,11 @@
     "paths_version": 1
   },
   "requested_spec": "None",
-  "sha256": "24d77f038eee41e9ad6a1dff196ac9b1379e5dcfe9f722ac763def1aa73c56a7",
-  "size": 163034,
+  "sha256": "ecda0d3375c956cf171618881e568ddfdc269c3e71d4f00557dd9eb4b70cebcd",
+  "size": 148118,
   "subdir": "osx-64",
-  "timestamp": 1592841354077,
+  "timestamp": 1635794174242,
   "track_features": "",
-  "url": "https://conda.anaconda.org/anaconda/osx-64/certifi-2020.6.20-py38_0.tar.bz2",
-  "version": "2020.6.20"
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/certifi-2021.10.8-py38h50d1736_1.tar.bz2",
+  "version": "2021.10.8"
 }

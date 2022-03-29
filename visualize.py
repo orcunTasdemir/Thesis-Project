@@ -11,7 +11,7 @@ def read_integers(filename):
         return [int(x) for x in f]   
 
 #library for the visualization purposes
-def visualizeGame(game: Game):
+def visualizeGame(game: Game, file_num : int):
     """Takes a field and visualizes
     it with matplotlib
 
@@ -57,12 +57,12 @@ def visualizeGame(game: Game):
     # use .imshow() method from pyplot to visualize agent locations
     pyplot.imshow(X = floatMatrix,
                 cmap = colormap)
-    pyplot.savefig("output1.png")
-    pyplot.show()
-
+    name = "games/gameFig_" + str(file_num) + ".png"
+    pyplot.savefig(name)
+    #pyplot.show()
     return True
 
-def visualizePopulation(output_file):
+def visualizePopulation(output_file, file_num):
     population = read_integers(output_file)
     # define figure size using pyplot
     pyplot.figure(figsize = (8,8))
@@ -77,4 +77,9 @@ def visualizePopulation(output_file):
     pyplot.yticks(fontsize = 16)
     # use .imshow() method from pyplot to visualize agent locations
     pyplot.plot(population)
-    pyplot.show()
+    strr = "games/populationFig_" + str(file_num) + ".png"
+    # print(str)
+    pyplot.savefig(strr)
+    # pyplot.show()
+    
+# visualizePopulation("output/output_7363.out")
