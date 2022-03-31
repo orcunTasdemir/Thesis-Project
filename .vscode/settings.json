@@ -1,0 +1,5 @@
+{
+    "python.formatting.provider": "black",
+    "workbench.colorTheme":"Dracula"
+
+}

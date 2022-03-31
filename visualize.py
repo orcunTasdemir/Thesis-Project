@@ -1,8 +1,9 @@
-from field import Field
-from game import *
+from textwrap import wrap
+from Field import Field
+from Game import *
 import numpy as np
-from agent import Agent
-from food import Food
+from Agent import Agent
+from Food import Food
 from matplotlib import colors, pyplot
 
 
@@ -11,7 +12,7 @@ def read_integers(filename):
         return [int(x) for x in f]   
 
 #library for the visualization purposes
-def visualizeGame(game: Game, file_num : int):
+def visualizeGame(game: Game, cycles : int, num_agents : int, file_num : int):
     """Takes a field and visualizes
     it with matplotlib
 
@@ -46,11 +47,11 @@ def visualizeGame(game: Game, file_num : int):
     # define figure size using pyplot
     pyplot.figure(figsize = (8,8))
     # using pyplot add a title
-    pyplot.title("First generation (blue = Agents, green = food)",
-                fontsize = 24)
+    pyplot.title("Population of " + game.game_type + " Game with " + game.environment_type + " environment over " + str(cycles) + " cycles.", 
+                fontsize = 24, wrap = True, pad=10)
     # using pyplot add x and y labels
-    pyplot.xlabel("x coordinates", fontsize = 20)
-    pyplot.ylabel("y coordinates", fontsize = 20)
+    pyplot.xlabel("Agents: Blue / Food: Green", fontsize = 20)
+    # pyplot.ylabel("y coordinates", fontsize = 20)
     # adjust x and y axis ticks, using pyplot
     pyplot.xticks(fontsize = 16)
     pyplot.yticks(fontsize = 16)
@@ -62,16 +63,16 @@ def visualizeGame(game: Game, file_num : int):
     #pyplot.show()
     return True
 
-def visualizePopulation(output_file, file_num):
+def visualizePopulation(game : Game, cycles : int, num_agents : int, output_file, file_num):
     population = read_integers(output_file)
     # define figure size using pyplot
     pyplot.figure(figsize = (8,8))
     # using pyplot add a title
-    pyplot.title("Population over cycles",
-                fontsize = 24)
+    pyplot.title("Population of " + game.game_type + " Game with " + game.environment_type + " environment over " + str(cycles) + " cycles.", 
+                fontsize = 24, wrap=True, pad=10)
     # using pyplot add x and y labels
-    pyplot.xlabel("cycles", fontsize = 20)
-    pyplot.ylabel("Population", fontsize = 20)
+    pyplot.xlabel("Agents: Blue / Food: Green", fontsize = 20)
+    # pyplot.ylabel("Population", fontsize = 20)
     # adjust x and y axis ticks, using pyplot
     pyplot.xticks(fontsize = 16)
     pyplot.yticks(fontsize = 16)

@@ -1,15 +1,10 @@
 ##########################################################
-
 from typing import Dict, List
-
-from agent import Agent
-from field import Field
-from food import Food
+from Agent import Agent
+from Field import Field
+from Food import Food
 import random
 import numpy as np
-
-### THEGAME ###
-# This is how we create the game, the game is the object we will run the simulation on
 
 class Game:
 
@@ -24,7 +19,7 @@ class Game:
     #ISS or SSS for individual survival strategy or social survival strategy
     game_types = {"ISS", "SSS"}
     #the default number of agents to be created in the first generation                         
-    num_of_first_generation = 1
+    default_num_first_generation = 1
                             
     ##########################################################
     def __init__(self,
@@ -34,7 +29,7 @@ class Game:
                  agents : dict = {},
                  #Environment type we are assigning to the game
                  environment_type : str = "Temperate",
-                 #game type is set to either ISS or SSS for individual survival strategy or social survival strategy
+                 #game type is set to either ISS or SSS for individual survival strategy #or social survival strategy
                  game_type : str = "ISS"):
                  
         """
@@ -50,6 +45,7 @@ class Game:
         self.field = field
         self.agents = agents
         self.environment_type = environment_type
+        self.game_type = game_type
     
     ##########################################################
     def __str__(self): #optimized (doesnt matter)
@@ -84,7 +80,7 @@ class Game:
         #print(f"init_field: The new field of size {field_size} is assigned to the game.\n")
 
     ##########################################################
-    def init_agents(self, num_of_agents : int = num_of_first_generation): #optimal
+    def init_agents(self, num_of_agents : int = default_num_first_generation): #optimal
         """
         Initializes the agents dictionary
 
@@ -124,10 +120,10 @@ class Game:
                     agent.x = x
                     agent.y = y
                     agent.facing_direction = random.choice(Agent.facing_directions) #we choose a random facing direction
-                    #put him on the field inside an array (important) so that multiple people can be 
-                    #there in the future
-                    self.field.array[x,y] = []
-                    self.field.array[x,y].append(agent)
+                    #put him on the field inside an array (important) so that square_limit
+                    # amount of people can be there in the future
+                    self.field.array[x,y] = agent
+                    #self.field.array[x,y].append(agent)
                     break
         #print(f"populate: The field was populated by {len(self.agents)} agents from the agent dictionary at random.\n")
     
@@ -180,39 +176,16 @@ class Game:
             agent_name (str): Agent to be deleted
         """
 
-        #we need to delete it off the field by deleteing it from the array for the
-        #square in the field
-        agent_x = self.agents[agent_name].x
-        agent_y = self.agents[agent_name].y
-        # print('deleted_agent: ', agent_name)
-        # print('agent_x: ', agent_x)
-        # print('agent_y: ', agent_y)
-        square_array = self.field.array[agent_x, agent_y]
-        index = 0
-        # print('square_array: ', square_array)
-        for agent in square_array:
-            if agent.name == agent_name:
-                self.field.array[self.agents[agent_name].x, self.agents[agent_name].y] = np.delete(square_array, index)
-            index += 1
+        #we need to delete it off the field by deleteing it from the square 
+        self.field.array[self.agents[agent_name].x, self.agents[agent_name].y] = None
 
         #we also need to delete him from the dictionary
         self.agents.pop(agent_name, None)
 
     
-    def move_agent_out(self, agent_name : str):
-        agent_x = self.agents[agent_name].x
-        agent_y = self.agents[agent_name].y
-
-        square_array = self.field.array[agent_x, agent_y]
-
-        #if it is not the only agent on the square, we only want to get rid of him
-        index = 0
-        # print('square_array: ', square_array)
-        for agent in square_array:
-            if agent.name == agent_name:
-                self.field.array[self.agents[agent_name].x, self.agents[agent_name].y] = np.delete(square_array, index)
-            index += 1
-
+    def move_agent_out(self, x : int, y : int):
+       
+        self.field.array[x, y] = None
             
 
 

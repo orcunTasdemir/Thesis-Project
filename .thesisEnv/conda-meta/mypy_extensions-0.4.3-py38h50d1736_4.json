@@ -1,0 +1,117 @@
+{
+  "build": "py38h50d1736_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0",
+    "python_abi 3.8.* *_cp38"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/mypy_extensions-0.4.3-py38h50d1736_4",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/mypy_extensions.cpython-38.pyc",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/LICENSE",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/mypy_extensions.py"
+  ],
+  "fn": "mypy_extensions-0.4.3-py38h50d1736_4.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/mypy_extensions-0.4.3-py38h50d1736_4",
+    "type": 1
+  },
+  "md5": "dd755ee24e78645ce3d9e09e71feecc0",
+  "name": "mypy_extensions",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/mypy_extensions-0.4.3-py38h50d1736_4.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/mypy_extensions.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "942f2a3d8bc612e9f222b5cb987c0dc83ee95c965037a5b9adc60ea16aad077e",
+        "sha256_in_prefix": "942f2a3d8bc612e9f222b5cb987c0dc83ee95c965037a5b9adc60ea16aad077e",
+        "size_in_bytes": 5464
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4",
+        "sha256_in_prefix": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4",
+        "size_in_bytes": 1204
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "563a8ae98b5f20e6fdb2769e4c5701df4225d7236a8454aafc4b1e2364659e40",
+        "sha256_in_prefix": "563a8ae98b5f20e6fdb2769e4c5701df4225d7236a8454aafc4b1e2364659e40",
+        "size_in_bytes": 1177
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "452182a3945d7ef4c8b54aa414eb7bc10e58e7c3f6e4a695291b7bb864433959",
+        "sha256_in_prefix": "452182a3945d7ef4c8b54aa414eb7bc10e58e7c3f6e4a695291b7bb864433959",
+        "size_in_bytes": 850
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "5b367c7308e1f25d23b542cd8d8ab51e9afe582a824603ebfbe4d7e0fe48d56a",
+        "sha256_in_prefix": "5b367c7308e1f25d23b542cd8d8ab51e9afe582a824603ebfbe4d7e0fe48d56a",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ccc73d806ac56bafd414d73ea42c0f18c3c35b0554d45c0fe3a155fa24d9d443",
+        "sha256_in_prefix": "ccc73d806ac56bafd414d73ea42c0f18c3c35b0554d45c0fe3a155fa24d9d443",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions-0.4.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4e5967196a83a053212b24e25fda5ea05d550b5c269118082c775e6e7b9b11bf",
+        "sha256_in_prefix": "4e5967196a83a053212b24e25fda5ea05d550b5c269118082c775e6e7b9b11bf",
+        "size_in_bytes": 16
+      },
+      {
+        "_path": "lib/python3.8/site-packages/mypy_extensions.py",
+        "path_type": "hardlink",
+        "sha256": "ceec251d13ed0cf2efce842ff7e152af2a0b28090a683229bb5e3e8ecda01ce1",
+        "sha256_in_prefix": "ceec251d13ed0cf2efce842ff7e152af2a0b28090a683229bb5e3e8ecda01ce1",
+        "size_in_bytes": 5078
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b7254c0d71c405e8d69e5121b43f81d18ad4e83fe99244694b8029851f0f0a8c",
+  "size": 10698,
+  "subdir": "osx-64",
+  "timestamp": 1635839987101,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/mypy_extensions-0.4.3-py38h50d1736_4.tar.bz2",
+  "version": "0.4.3"
+}

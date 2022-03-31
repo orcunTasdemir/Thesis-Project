@@ -1,9 +1,9 @@
-from agent import Agent
-from game import *
-from field import Field
-from food import Food
-from simulate import simulate
-from visualize import *
+from Agent import Agent
+from Field import Field
+from Food import Food
+from Game import Game
+from Simulate import simulate
+from Visualize import *
 from typing import Dict
 from random import randint, randrange
 import numpy as np
@@ -14,14 +14,14 @@ def run_simulations(num_of_sims : int = 2,
                     num_agents : int = 50,
                     cycles : int = 1000,
                     environment_type : str = "Super-Harsh",
-                    game_type : str = "SSS",
+                    game_type : str = "ISS",
                     field_size : int = 100):
 
     print("########## :: SIMULATION INITIATED :: ##########")
     for i in range(num_of_sims):
         file_num = randrange(1000, 10000)
         #create a game with the field and agents we have now
-        game = Game(field = Field(field_size),
+        game = Game(    field = Field(field_size),
                         agents = dict(),
                         environment_type = environment_type,
                         game_type = game_type)
@@ -41,14 +41,14 @@ def run_simulations(num_of_sims : int = 2,
         #print(game.agents)
         
         # Visualize the game and save it under the games/ folder
-        visualizeGame(game, file_num)
+        visualizeGame(game, cycles, num_agents, file_num)
         
         address = "output/output_"+ str(file_num)+ ".out"
         #graph of the populations
-        visualizePopulation(address, file_num)
+        visualizePopulation(game, cycles, num_agents, address, file_num)
         
 
-run_simulations(1, 150, 700, "Harsh")
+run_simulations(1, 150, 20, "Harsh")
 # #Visualize population
 #visualizePopulation("output/output_0.out")
 

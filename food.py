@@ -1,15 +1,20 @@
 
 #This is how we create food
 
-class Food():
+class Food:
+
+    energy = 50.0
+    x = None
+    y = None
+    
     #init method is the constructor for the food
-    def __init__(self, energy  : int = 50):
-        """Food constructor
+    def __init__(self, energy  : float = energy, x : int = x, y : int = y):
+        """Food
 
         Args:
-            energy (int, optional): Energy the food provides. Defaults to 50.
+            energy (float, optional): _description_. Defaults to energy.
         """
-        self.energy = energy #energy the food provides
-        self.x = None #the x coordinate for the agent
-        self.y = None #the y coordinate for the agent
-
+        
+        self.energy = energy
+        self.x = x
+        self.y = y

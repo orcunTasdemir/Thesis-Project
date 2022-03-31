@@ -5,13 +5,13 @@
 import math
 from typing import Dict
 import numpy as np
-from agent import Agent
-from field import Field
-from file_writer import fileWriter
-from food import Food
-import random
+from Agent import Agent
+from Field import Field
+from FileWriter import fileWriter
+from Food import Food
+from random import random, randint, randrange, getrandbits, choice
 from math import pi
-from game import Game
+from Game import Game
 import csv
 from itertools import permutations
 
@@ -226,7 +226,7 @@ def simulate(game : Game, cycles = 20000, file_num : int = 0):
                             break
                     except Exception:
                         pass                
-
+            
             #we have the food neural inputs set now, we make our agent take a move
             move_instructions = agent.neuralNetwork.run_network(np.array([distance,angle]))
             #print("Move instructions for the agent: ", move_instructions, "\n")
@@ -241,73 +241,82 @@ def simulate(game : Game, cycles = 20000, file_num : int = 0):
             turn_right = False
             move = 0
 
+            #if the second input rounds to zero we want to turn left
+            if move_instructions[0][1] <= 0.4: #for turn left
+                turn_left = True
+                agent.facing_direction = fds[(agent.facing_direction - 1)%4]
+            elif move_instructions[0][1] >= 0.6: #for turn right
+                turn_right = True
+                agent.facing_direction = fds[(agent.facing_direction + 1)%4]
+            
+            fd = agent.facing_direction
+            edge = size-1
+            # # there are 4 possible squares that the agent can move
+            # square_0 = game.field.array[agent_x, agent_y+1]
+            # square_2 = game.field.array[agent_x, agent_y-1]
+            # square_3 = game.field.array[agent_x+1, agent_y]
+            # square_1  = game.field.array[agent_x-1, agent_y]
+            
+            # squares = [square_0, square_1, square_2, square_3]
+            #the head is turned so unless the move is not 1, we do not need to do anything else!
             #ASK ABOUT THIS PART, I WANT TO HAVE SOME SORT OF
             #JUSTIFICATION FOR THIS DECISION??
-            if move_instructions[0][0] > 0.2:
+            if move_instructions[0][0] > 0.2: #and food or None in squares
+                # print("Moves happening")
                 move = 1
-                #if the second input rounds to zero we want to turn left
-                if move_instructions[0][1] <= 0.4:
-                    turn_left = True
-                elif move_instructions[0][1] >= 0.6:
-                    turn_right = True
-
-            #now we can make him move
-            #first we need to make him take a turn
-            if turn_left:
-                agent.facing_direction = fds[(agent.facing_direction - 1)%4]
-            elif turn_right:
-                agent.facing_direction = fds[(agent.facing_direction + 1)%4]
-
-            #we cant empty the last square because there may be other agents
-            #on that square, what we can do is that we can utilize our 
-            #delete agent function. and write a move_agent_out_function
-            # print('is agent here 2: ', game.field.array[agent.x, agent.y])
-            # Chnaged cthis NOTSURE
-            #             if(len(game.field.array[game.agents[agent_name].x, game.agents[agent_name].y]) == 1):
-
-            if(len(game.field.array[agent.x, agent.y]) == 1):
-                game.field.array[agent.x, agent.y] = None
-            else:
-                game.move_agent_out(agent_name)
-
-            fd = agent.facing_direction
-            #0 is for facing downwards
-            if fd == 0 and agent_y < (size-1):
-                agent_y = agent_y + move
-            #1 is for facing left
-            elif fd == 1 and agent_x > 0:
-                agent_x = agent_x - move
-            #2 is for facing upwards
-            elif fd == 2 and agent_y > 0:
-                agent_y = agent_y - move
-            #3 is for facing right
-            elif fd == 3 and agent_x < (size-1):
-                agent_x = agent_x + move
-            
-            
-            #before putting him in the new coordinates I want to check if there was
-            #a food in that same location
-            if isinstance(game.field.array[agent_x, agent_y], Food):
-                food = game.field.array[agent_x, agent_y]
-                #if so, I want to add energy to my agent
-                agent.energy += food.energy
-                #I want to delete the food item by giving its coordinates
-                game.delete_food(agent_x, agent_y)
-                #commented below line out as we shouldnt do that: NOTSURE
-                #game.field.array[agent_x, agent_y] = [agent]
-            
-            if game.field.array[agent_x, agent_y] is None:
-                game.field.array[agent_x, agent_y] = [agent]
-            else:            
-                #if there is already an agent
-                game.field.array[agent_x, agent_y] = np.append(game.field.array[agent_x, agent_y], agent)
-
-            
-            #put him on the field
-            #and finally finalize my movement of the agent
-            #update agent's coordinates
-            agent.x = agent_x
-            agent.y = agent_y
+                # fd = agent.facing_direction 
+                
+                # cant move if the square in front of us is already occupied
+                # then x and y stay the same at the end of the day only the facing direction
+                # changed
+                
+                #0 is for facing downwards
+                if fd == 0 and agent_y < edge and not isinstance(game.field.array[agent_x, agent_y+1], Agent):
+                    game.move_agent_out(agent_x, agent_y)
+                    agent_y = agent_y + move
+                    if isinstance(game.field.array[agent_x, agent_y], Food):
+                        agent.energy += game.field.array[agent_x, agent_y].energy
+                        game.delete_food(agent_x, agent_y)
+                        agent.x = agent_x
+                        agent.y = agent_y
+                        game.field.array[agent_x, agent_y] = agent
+                        
+                #1 is for facing downwards
+                if fd == 1 and agent_x > 0 and not isinstance(game.field.array[agent_x-1, agent_y], Agent):
+                    game.move_agent_out(agent_x, agent_y)
+                    agent_x = agent_x - move
+                    if isinstance(game.field.array[agent_x, agent_y], Food):
+                        agent.energy += game.field.array[agent_x, agent_y].energy
+                        game.delete_food(agent_x, agent_y)
+                        agent.x = agent_x
+                        agent.y = agent_y
+                        game.field.array[agent_x, agent_y] = agent
+                        
+                #2 is for facing up
+                if fd == 2 and agent_y > 0 and not isinstance(game.field.array[agent_x, agent_y-1], Agent):
+                    game.move_agent_out(agent_x, agent_y)
+                    agent_y = agent_y - move
+                    if isinstance(game.field.array[agent_x, agent_y], Food):
+                        agent.energy += game.field.array[agent_x, agent_y].energy
+                        game.delete_food(agent_x, agent_y)
+                        agent.x = agent_x
+                        agent.y = agent_y
+                        game.field.array[agent_x, agent_y] = agent
+                        
+                #0 is for facing downwards
+                if fd == 3 and agent_x < edge and not isinstance(game.field.array[agent_x+1, agent_y], Agent):
+                    game.move_agent_out(agent_x, agent_y)
+                    agent_x = agent_x + move
+                    if isinstance(game.field.array[agent_x, agent_y], Food):
+                        agent.energy += game.field.array[agent_x, agent_y].energy
+                        game.delete_food(agent_x, agent_y)
+                        agent.x = agent_x
+                        agent.y = agent_y
+                        game.field.array[agent_x, agent_y] = agent
+         
+       
+                
+                
             
             #print("we move the agent here: ({},{})".format(agent.x, agent.y))
             #game.field.array[agent.x, agent.y] = agent
@@ -323,16 +332,25 @@ def simulate(game : Game, cycles = 20000, file_num : int = 0):
                 offspring.neuralNetwork = agent.neuralNetwork
 
 
-                #put him on the field in the same square as the parent
-                offspring.x =  agent.x
-                # if offspring_x >= (size-1): offspring_x = (size-1)
-                # if offspring_x <= 0: offspring_x = 0
-                offspring.y =  agent.y
-                # if offspring_y >= (size-1): offspring_y = (size-1)
-                # if offspring_y <= 0: offspring_y = 0
-
-                 
-                
+                #put him on the field to the nearest square to the parent
+                i = 0
+                not_placed = True
+                while not_placed:
+                    print("infinite_loop")
+                    i += 1
+                    spiral_updates = spiral_update(i)
+                    for update in spiral_updates:
+                        off_x = agent_x + update[0]
+                        off_y = agent_y + update[1]
+                        try:
+                            if game.field.array[off_x, off_y] is None:
+                                offspring.x =  off_x
+                                offspring.y =  off_y
+                                not_placed = False
+                                break
+                        except Exception:
+                            pass
+                    
                 # There wouldnt be food because he is being born to the same square with his parent
                 
                 # if isinstance(game.field.array[offspring_x, offspring_y], Food):
@@ -349,11 +367,10 @@ def simulate(game : Game, cycles = 20000, file_num : int = 0):
                 #     game.field.array[offspring_x, offspring_y] = [offspring]
                 # else:
                     #if there is already an agent
-                game.field.array[offspring.x, offspring.y] = np.append(game.field.array[offspring.x, offspring.y], offspring)
+                game.field.array[offspring.x, offspring.y] = offspring
                 
-               
                 #give a random facing direction
-                offspring.facing_direction = random.choice(fds)
+                offspring.facing_direction = choice(fds)
                 offspring.neuralNetwork.genetic_mutation()
 
                 #put offspring on the field
