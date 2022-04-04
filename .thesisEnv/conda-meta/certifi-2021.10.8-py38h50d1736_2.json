@@ -1,13 +1,13 @@
 {
-  "build": "py38h50d1736_1",
-  "build_number": 1,
+  "build": "py38h50d1736_2",
+  "build_number": 2,
   "channel": "https://conda.anaconda.org/conda-forge/osx-64",
   "constrains": [],
   "depends": [
     "python >=3.8,<3.9.0a0",
     "python_abi 3.8.* *_cp38"
   ],
-  "extracted_package_dir": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1",
+  "extracted_package_dir": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_2",
   "features": "",
   "files": [
     "lib/python3.8/site-packages/certifi-2021.10.8-py3.8.egg-info/PKG-INFO",
@@ -24,15 +24,15 @@
     "lib/python3.8/site-packages/certifi/cacert.pem",
     "lib/python3.8/site-packages/certifi/core.py"
   ],
-  "fn": "certifi-2021.10.8-py38h50d1736_1.tar.bz2",
+  "fn": "certifi-2021.10.8-py38h50d1736_2.tar.bz2",
   "license": "ISC",
   "link": {
-    "source": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1",
+    "source": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_2",
     "type": 1
   },
-  "md5": "c45ff53e0b329fe61b3f0cfdd37fa0fa",
+  "md5": "667c7231c06df3912f906e4045649805",
   "name": "certifi",
-  "package_tarball_full_path": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_1.tar.bz2",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/certifi-2021.10.8-py38h50d1736_2.tar.bz2",
   "paths_data": {
     "paths": [
       {
@@ -130,11 +130,11 @@
     "paths_version": 1
   },
   "requested_spec": "None",
-  "sha256": "ecda0d3375c956cf171618881e568ddfdc269c3e71d4f00557dd9eb4b70cebcd",
-  "size": 148118,
+  "sha256": "1e60eebff6e10cf9f3932960a9c7c1f5a5790215fd0dcf79efccccb1f88e2e5b",
+  "size": 148210,
   "subdir": "osx-64",
-  "timestamp": 1635794174242,
+  "timestamp": 1648695817319,
   "track_features": "",
-  "url": "https://conda.anaconda.org/conda-forge/osx-64/certifi-2021.10.8-py38h50d1736_1.tar.bz2",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/certifi-2021.10.8-py38h50d1736_2.tar.bz2",
   "version": "2021.10.8"
 }

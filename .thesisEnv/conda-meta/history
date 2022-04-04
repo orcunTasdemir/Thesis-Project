@@ -127,3 +127,9 @@
 +conda-forge/osx-64::mypy_extensions-0.4.3-py38h50d1736_4
 +conda-forge/osx-64::typed-ast-1.5.2-py38h96a0964_0
 # update specs: ['black']
+==> 2022-04-04 11:10:36 <==
+# cmd: /opt/anaconda3/bin/conda install ipython
+# conda version: 4.10.3
+-conda-forge/osx-64::certifi-2021.10.8-py38h50d1736_1
++conda-forge/osx-64::certifi-2021.10.8-py38h50d1736_2
+# update specs: ['ipython']
