@@ -5,6 +5,7 @@ import numpy as np
 from Agent import Agent
 from Food import Food
 from matplotlib import colors, pyplot
+import os
 
 
 def read_integers(filename):
@@ -59,7 +60,8 @@ def visualizeGame(game: Game, cycles: int, num_agents: int, file_num: int):
     # use .imshow() method from pyplot to visualize agent locations
     pyplot.imshow(X=floatMatrix,
                   cmap=colormap)
-    name = "/../games/gameFig_" + str(file_num) + ".png"
+    os.chdir('/Users/orcuntasdemir/Desktop/vassar/thesis/code')
+    name = "games/gameFig_" + str(file_num) + ".png"
     pyplot.savefig(name)
     # pyplot.show()
     return True
@@ -80,7 +82,8 @@ def visualizePopulation(game: Game, cycles: int, num_agents: int, output_file, f
     pyplot.yticks(fontsize=16)
     # use .imshow() method from pyplot to visualize agent locations
     pyplot.plot(population)
-    strr = "/../games/populationFig_" + str(file_num) + ".png"
+    os.chdir('/Users/orcuntasdemir/Desktop/vassar/thesis/code')
+    strr = "games/populationFig_" + str(file_num) + ".png"
     # print(str)
     pyplot.savefig(strr)
     # pyplot.show()
