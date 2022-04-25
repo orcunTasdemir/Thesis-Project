@@ -350,6 +350,13 @@ class MSVCCompiler(CCompiler) :
                 # without asking the user to browse for it
                 src = os.path.abspath(src)
 
+            # Anaconda/conda-forge customisation, we want our pdbs to be
+            # relocatable:
+            # https://developercommunity.visualstudio.com/comments/623156/view.html
+            d1trimfile_opts = []
+            if 'SRC_DIR' in os.environ and os.path.basename(self.cc) == "cl.exe":
+                d1trimfile_opts.append("/d1trimfile:" + os.environ['SRC_DIR'])
+
             if ext in self._c_extensions:
                 input_opt = "/Tc" + src
             elif ext in self._cpp_extensions:
@@ -394,7 +401,7 @@ class MSVCCompiler(CCompiler) :
                 raise CompileError("Don't know how to compile {} to {}"
                                    .format(src, obj))
 
-            args = [self.cc] + compile_opts + pp_opts
+            args = [self.cc] + compile_opts + pp_opts + d1trimfile_opts
             if add_cpp_opts:
                 args.append('/EHsc')
             args.append(input_opt)

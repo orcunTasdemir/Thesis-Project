@@ -271,7 +271,7 @@ typedef enum VP8StatusCode {
 // Creates a new incremental decoder with the supplied buffer parameter.
 // This output_buffer can be passed NULL, in which case a default output buffer
 // is used (with MODE_RGB). Otherwise, an internal reference to 'output_buffer'
-// is kept, which means that the lifespan of 'output_buffer' must be larger than
+// is kept, which means that the life_span of 'output_buffer' must be larger than
 // that of the returned WebPIDecoder object.
 // The supplied 'output_buffer' content MUST NOT be changed between calls to
 // WebPIAppend() or WebPIUpdate() unless 'output_buffer.is_external_memory' is

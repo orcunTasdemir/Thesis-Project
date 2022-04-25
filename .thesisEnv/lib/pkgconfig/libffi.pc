@@ -1,8 +1,8 @@
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 toolexeclibdir=${libdir}
-includedir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
+includedir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
 
 Name: libffi
 Description: Library supporting Foreign Function Interfaces

@@ -1,7 +1,7 @@
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 exec_prefix=${prefix}
-includedir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
-libdir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
+includedir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
+libdir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib
 
 Name: libdeflate
 Description: Fast implementation of DEFLATE, zlib, and gzip

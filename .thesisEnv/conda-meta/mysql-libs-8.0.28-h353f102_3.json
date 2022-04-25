@@ -1,0 +1,76 @@
+{
+  "build": "h353f102_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [
+    "libcxx >=12.0.1",
+    "libzlib >=1.2.11,<1.3.0a0",
+    "mysql-common 8.0.28 hdd8d184_3",
+    "openssl >=3.0.2,<4.0a0",
+    "zstd >=1.5.2,<1.6.0a0"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/mysql-libs-8.0.28-h353f102_3",
+  "features": "",
+  "files": [
+    "lib/libmysqlclient.21.dylib",
+    "lib/libmysqlclient.dylib",
+    "lib/plugin/libcrypto.3.dylib",
+    "lib/plugin/libfido2.1.dylib",
+    "lib/plugin/libssl.3.dylib"
+  ],
+  "fn": "mysql-libs-8.0.28-h353f102_3.tar.bz2",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/mysql-libs-8.0.28-h353f102_3",
+    "type": 1
+  },
+  "md5": "7a4f27533c355b6de515af01d74620f3",
+  "name": "mysql-libs",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/mysql-libs-8.0.28-h353f102_3.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libmysqlclient.21.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/mysql-suite_1649067320637/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "d0ce99ea32aeda0ae9ff6698a2f97b55488dee98de684770d991a77c1b78da1c",
+        "sha256_in_prefix": "f3d74bbfd90eecd49494b93c350bac7fb677412d4009fe9a36bdc51a891a719c",
+        "size_in_bytes": 6930168
+      },
+      {
+        "_path": "lib/libmysqlclient.dylib",
+        "path_type": "softlink",
+        "sha256": "d0ce99ea32aeda0ae9ff6698a2f97b55488dee98de684770d991a77c1b78da1c",
+        "size_in_bytes": 6930168
+      },
+      {
+        "_path": "lib/plugin/libcrypto.3.dylib",
+        "path_type": "softlink",
+        "sha256": "4671cf5d8f0230da52fb37770c59f673f1f4ef134785d0b034e0a22a325305b5",
+        "size_in_bytes": 3911544
+      },
+      {
+        "_path": "lib/plugin/libfido2.1.dylib",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/plugin/libssl.3.dylib",
+        "path_type": "softlink",
+        "sha256": "f775a3b92552a2b2af9472580f13f36b498d21cfd6c016ed4b2123802fd40772",
+        "size_in_bytes": 614816
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "28a447d3c40a9570b2c2a7c09e99a608959397ebe5985c16a402ba40f1a18f43",
+  "size": 2025272,
+  "subdir": "osx-64",
+  "timestamp": 1649074139568,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/mysql-libs-8.0.28-h353f102_3.tar.bz2",
+  "version": "8.0.28"
+}

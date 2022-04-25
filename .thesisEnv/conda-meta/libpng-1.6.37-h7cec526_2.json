@@ -53,7 +53,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libpng_1604163306697/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "29552cf7673e6a5fd19aec6a7d8baaa7ef4ffdaf0fbd4b68507c888aa2e80134",
-        "sha256_in_prefix": "17fa0828c28414f2455f0d7202822482a522e2e718504ef72976578a2f98483c",
+        "sha256_in_prefix": "6380db14cb767cd1fc6e81c6776364453915b202e312dfbb6f2285cec0dcbb1a",
         "size_in_bytes": 2564
       },
       {
@@ -153,7 +153,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libpng_1604163306697/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "949ac641bead9507013e0527177893bc0bf5863244bdcb8ed8818449011cfeed",
-        "sha256_in_prefix": "7a22e19e4129b73207574f386f2ef32303ab9806c20c190962e42782d4bfa343",
+        "sha256_in_prefix": "ff949b2cfce822d8b6a286c42907417434044a90330cfedaa76cf06fa3e1ec77",
         "size_in_bytes": 502
       },
       {

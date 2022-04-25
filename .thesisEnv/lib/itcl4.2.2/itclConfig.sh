@@ -26,8 +26,8 @@ ITCL_BUILD_LIB_SPEC='-L/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/
 
 # String to pass to linker to pick up the Itcl library from its
 # installed directory.
-itcl_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2 -litcl4.2.2'
-ITCL_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2 -litcl4.2.2'
+itcl_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2 -litcl4.2.2'
+ITCL_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2 -litcl4.2.2'
 
 # The name of the Itcl stub library (a .a file):
 itcl_STUB_LIB_FILE=libitclstub4.2.2.a
@@ -40,8 +40,8 @@ ITCL_BUILD_STUB_LIB_SPEC='-L/Users/runner/miniforge3/conda-bld/tk_1645032364843/
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
-itcl_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2 -litclstub4.2.2'
-ITCL_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2 -litclstub4.2.2'
+itcl_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2 -litclstub4.2.2'
+ITCL_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2 -litclstub4.2.2'
 
 # String to pass to linker to pick up the Itcl stub library from its
 # build directory.
@@ -50,8 +50,8 @@ ITCL_BUILD_STUB_LIB_PATH='/Users/runner/miniforge3/conda-bld/tk_1645032364843/wo
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
-itcl_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2/libitclstub4.2.2.a'
-ITCL_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/itcl4.2.2/libitclstub4.2.2.a'
+itcl_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2/libitclstub4.2.2.a'
+ITCL_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/itcl4.2.2/libitclstub4.2.2.a'
 
 # Location of the top-level source directories from which [incr Tcl]
 # was built.  This is the directory that contains generic, unix, etc.

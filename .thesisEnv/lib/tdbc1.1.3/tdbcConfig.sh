@@ -24,8 +24,8 @@ TDBC_BUILD_LIB_SPEC="-L/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/
 
 # String to pass to the linker to pick up the TDBC library from its installed
 # dir.
-tdbc_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbc1.1.3"
-TDBC_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbc1.1.3"
+tdbc_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbc1.1.3"
+TDBC_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbc1.1.3"
 
 # Name of the TBDC stub library
 tdbc_STUB_LIB_FILE="libtdbcstub1.1.3.a"
@@ -38,16 +38,16 @@ TDBC_BUILD_STUB_LIB_SPEC="-L/Users/runner/miniforge3/conda-bld/tk_1645032364843/
 
 # String to pass to the linker to pick up the TDBC stub library from its
 # installed directory
-tdbc_STUB_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbcstub1.1.3"
-TDBC_STUB_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbcstub1.1.3"
+tdbc_STUB_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbcstub1.1.3"
+TDBC_STUB_LIB_SPEC="-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3 -ltdbcstub1.1.3"
 
 # Path name of the TDBC stub library in its build directory
 tdbc_BUILD_STUB_LIB_PATH="/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/tcl8.6.12/unix/pkgs/tdbc1.1.3/libtdbcstub1.1.3.a"
 TDBC_BUILD_STUB_LIB_PATH="/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/tcl8.6.12/unix/pkgs/tdbc1.1.3/libtdbcstub1.1.3.a"
 
 # Path name of the TDBC stub library in its installed directory
-tdbc_STUB_LIB_PATH="/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3/libtdbcstub1.1.3.a"
-TDBC_STUB_LIB_PATH="/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3/libtdbcstub1.1.3.a"
+tdbc_STUB_LIB_PATH="/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3/libtdbcstub1.1.3.a"
+TDBC_STUB_LIB_PATH="/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3/libtdbcstub1.1.3.a"
 
 # Location of the top-level source directories from which TDBC was built.
 # This is the directory that contains doc/, generic/ and so on.  If TDBC
@@ -59,8 +59,8 @@ TDBC_SRC_DIR="/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/tcl8.6.12
 
 # String to pass to the compiler so that an extension can find installed TDBC
 # headers
-tdbc_INCLUDE_SPEC="-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include"
-TDBC_INCLUDE_SPEC="-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include"
+tdbc_INCLUDE_SPEC="-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include"
+TDBC_INCLUDE_SPEC="-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include"
 
 # String to pass to the compiler so that an extension can find TDBC headers
 # in the source directory
@@ -68,8 +68,8 @@ tdbc_BUILD_INCLUDE_SPEC="-I/Users/runner/miniforge3/conda-bld/tk_1645032364843/w
 TDBC_BUILD_INCLUDE_SPEC="-I/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/tcl8.6.12/pkgs/tdbc1.1.3/generic"
 
 # Path name where .tcl files in the tdbc package appear at run time.
-tdbc_LIBRARY_PATH="/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3"
-TDBC_LIBRARY_PATH="/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/tdbc1.1.3"
+tdbc_LIBRARY_PATH="/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3"
+TDBC_LIBRARY_PATH="/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/tdbc1.1.3"
 
 # Path name where .tcl files in the tdbc package appear at build time.
 tdbc_BUILD_LIBRARY_PATH="/Users/runner/miniforge3/conda-bld/tk_1645032364843/work/tcl8.6.12/pkgs/tdbc1.1.3/library"

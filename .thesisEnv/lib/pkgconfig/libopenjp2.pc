@@ -1,4 +1,4 @@
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 bindir=${prefix}/bin
 mandir=${prefix}/
 docdir=${prefix}/

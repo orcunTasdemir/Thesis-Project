@@ -1,8 +1,8 @@
 # tcl pkg-config source file
 
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
-exec_prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
-libdir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
+exec_prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
+libdir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib
 includedir=${prefix}/include
 
 Name: Tool Command Language

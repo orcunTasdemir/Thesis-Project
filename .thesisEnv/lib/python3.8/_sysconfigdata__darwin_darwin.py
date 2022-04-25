@@ -2,74 +2,148 @@
 build_time_vars = {'ABIFLAGS': '',
  'AC_APPLE_UNIVERSAL_BUILD': 0,
  'AIX_GENUINE_CPLUSPLUS': 0,
+ 'ALT_SOABI': 0,
  'ANDROID_API_LEVEL': 0,
  'AR': 'ar',
- 'ARFLAGS': 'rc',
+ 'ARFLAGS': 'rcs',
  'BASECFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code',
- 'BASECPPFLAGS': '',
+ 'BASECPPFLAGS': '-IObjects -IInclude -IPython',
  'BASEMODLIBS': '',
- 'BINDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/bin',
- 'BINLIBDEST': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8',
- 'BLDLIBRARY': '-L. -lpython3.8',
- 'BLDSHARED': 'gcc -bundle -undefined dynamic_lookup '
-              '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-              '-arch x86_64 '
-              '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-              '-arch x86_64',
+ 'BINDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/bin',
+ 'BINLIBDEST': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8',
+ 'BLDLIBRARY': 'libpython3.8.a',
+ 'BLDSHARED': 'clang -bundle -undefined '
+              'dynamic_lookup '
+              ''
+              ''
+              ''
+              '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+              '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+              ''
+              ''
+              ''
+              ''
+              '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+              '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
  'BUILD_GNU_TYPE': 'x86_64-apple-darwin13.4.0',
  'BYTESTR_DEPS': '\\',
- 'CC': 'gcc',
+ 'CC': 'clang',
  'CCSHARED': '',
- 'CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g '
-           '-fwrapv -O3 -Wall -Wstrict-prototypes '
-           '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-           '-arch x86_64 '
-           '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-           '-arch x86_64',
+ 'CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG '
+           '-fwrapv -O2 -Wall '
+           ''
+           '-fPIC  '
+           '-O2  -isystem '
+           '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+           ''
+           ''
+           ''
+           ''
+           '-fPIC  '
+           '-O2  -isystem '
+           '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+           ''
+           ''
+           '',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '-fno-strict-aliasing',
- 'CFLAGS_NODIST': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-                     '-arch x86_64',
- 'CONFIGURE_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
-                            '-Wno-unused-parameter '
-                            '-Wno-missing-field-initializers',
- 'CONFIGURE_CPPFLAGS': '',
- 'CONFIGURE_LDFLAGS': '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-                      '-arch x86_64',
- 'CONFIG_ARGS': "'--enable-shared' '--enable-ipv6' '--with-ensurepip=no' "
-                "'--prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv' "
-                "'CFLAGS=-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  "
-                "-arch x86_64' "
-                "'LDFLAGS=-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  "
-                "-arch x86_64' "
-                "'PKG_CONFIG_PATH=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/pkgconfig'",
- 'CONFINCLUDEDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include',
- 'CONFINCLUDEPY': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include/python3.8',
- 'COREPYTHONPATH': ':',
- 'COVERAGE_INFO': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12/coverage.info',
- 'COVERAGE_REPORT': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12/lcov-report',
+ 'CONFIGURE_CFLAGS': ''
+                     ''
+                     ''
+                     '-fPIC   -O2  -isystem '
+                     '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                     ''
+                     ''
+                     '',
+ 'CONFIGURE_CFLAGS_NODIST': '-Wl,-export_dynamic -g -std=c99 -Wextra '
+                            '-Wno-unused-result -Wno-unused-parameter '
+                            '-Wno-missing-field-initializers '
+                            '-Wstrict-prototypes '
+                            '-Werror=implicit-function-declaration',
+ 'CONFIGURE_CPPFLAGS': ''
+                       ''
+                       '-D_FORTIFY_SOURCE=2 -isystem '
+                       '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                       '-mmacosx-version-min=10.9 '
+                       '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'CONFIGURE_LDFLAGS': ''
+                      ''
+                      ''
+                      ''
+                      '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                      '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
+ 'CONFIGURE_LDFLAGS_NODIST': '-Wl,-export_dynamic -g',
+ 'CONFIG_ARGS': "'--prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv'"
+                "'--build=x86_64-apple-darwin13.4.0'"
+                "'--host=x86_64-apple-darwin13.4.0''--enable-ipv6'"
+                "'--with-ensurepip=no''--with-computed-gotos'"
+                "'--with-system-ffi''--enable-loadable-sqlite-extensions'"
+                "'--with-tcltk-includes=-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include'"
+                "'--with-tcltk-libs=-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib "
+                "-ltcl8.6 -ltk8.6''--with-lto''--enable-optimizations'"
+                "'-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1648187675337/_build_env/x86_64-apple-darwin13.4.0/sysroot/usr/include'"
+                "'--disable-shared''PROFILE_TASK=-m test --pgo'"
+                "'build_alias=x86_64-apple-darwin13.4.0'"
+                "'host_alias=x86_64-apple-darwin13.4.0''MACHDEP=darwin'"
+                "'CC=clang''CFLAGS="
+                ''
+                '-fPIC '
+                '-O2  -isystem '
+                '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                ''
+                ''
+                "''LDFLAGS="
+                ''
+                ''
+                ''
+                '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                "-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib'"
+                "'CPPFLAGS="
+                ''
+                '-D_FORTIFY_SOURCE=2 -isystem '
+                '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                '-mmacosx-version-min=10.9 '
+                "-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include'"
+                "'PKG_CONFIG_PATH=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/pkgconfig'",
+ 'CONFINCLUDEDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'CONFINCLUDEPY': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include/python3.8',
+ 'COREPYTHONPATH': '',
+ 'COVERAGE_INFO': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/build-static/coverage.info',
+ 'COVERAGE_REPORT': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/build-static/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--no-branch-coverage --title "CPython lcov '
                             'report"',
- 'CPPFLAGS': '-I. -I./Include',
- 'CXX': 'g++',
- 'DESTDIRS': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv '
-             '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib '
-             '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8 '
-             '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8/lib-dynload',
- 'DESTLIB': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8',
+ 'CPPFLAGS': '-IObjects -IInclude -IPython -I. '
+             '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include '
+             ''
+             ''
+             '-D_FORTIFY_SOURCE=2 -isystem '
+             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+             '-mmacosx-version-min=10.9 '
+             '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+             ''
+             ''
+             '-D_FORTIFY_SOURCE=2 -isystem '
+             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+             '-mmacosx-version-min=10.9 '
+             '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'CXX': 'clang++',
+ 'DESTDIRS': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv '
+             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8 '
+             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8/lib-dynload',
+ 'DESTLIB': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8',
  'DESTPATH': '',
- 'DESTSHARED': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8/lib-dynload',
+ 'DESTSHARED': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
- 'DIST': 'README ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
+ 'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
          'Makefile.pre.in Include Lib Misc Ext-dummy',
  'DISTDIRS': 'Include Lib Misc Ext-dummy',
- 'DISTFILES': 'README ChangeLog configure configure.ac acconfig.h '
+ 'DISTFILES': 'README.rst ChangeLog configure configure.ac acconfig.h '
               'pyconfig.h.in Makefile.pre.in',
  'DLINCLDIR': '.',
  'DLLLIBRARY': '',
@@ -85,11 +159,10 @@ build_time_vars = {'ABIFLAGS': '',
  'ENSUREPIP': 'no',
  'EXE': '',
  'EXEMODE': 755,
- 'EXTRAMACHDEPPATH': '',
  'EXTRATESTOPTS': '',
- 'EXTRA_CFLAGS': '',
  'EXT_SUFFIX': '.cpython-38-darwin.so',
  'FILEMODE': 644,
+ 'FLOAT_WORDS_BIGENDIAN': 0,
  'FLOCK_NEEDS_LIBBSD': 0,
  'GETPGRP_HAVE_ARG': 0,
  'GETTIMEOFDAY_NO_TZ': 0,
@@ -130,12 +203,23 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_CONFSTR': 1,
  'HAVE_CONIO_H': 0,
  'HAVE_COPYSIGN': 1,
+ 'HAVE_COPY_FILE_RANGE': 0,
+ 'HAVE_CRYPT_H': 0,
+ 'HAVE_CRYPT_R': 0,
  'HAVE_CTERMID': 1,
  'HAVE_CTERMID_R': 1,
+ 'HAVE_CURSES_FILTER': 1,
  'HAVE_CURSES_H': 1,
+ 'HAVE_CURSES_HAS_KEY': 1,
+ 'HAVE_CURSES_IMMEDOK': 1,
+ 'HAVE_CURSES_IS_PAD': 1,
  'HAVE_CURSES_IS_TERM_RESIZED': 1,
  'HAVE_CURSES_RESIZETERM': 1,
  'HAVE_CURSES_RESIZE_TERM': 1,
+ 'HAVE_CURSES_SYNCOK': 1,
+ 'HAVE_CURSES_TYPEAHEAD': 1,
+ 'HAVE_CURSES_USE_ENV': 1,
+ 'HAVE_CURSES_WCHGAT': 1,
  'HAVE_DECL_ISFINITE': 1,
  'HAVE_DECL_ISINF': 1,
  'HAVE_DECL_ISNAN': 1,
@@ -143,6 +227,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_DECL_RTLD_GLOBAL': 1,
  'HAVE_DECL_RTLD_LAZY': 1,
  'HAVE_DECL_RTLD_LOCAL': 1,
+ 'HAVE_DECL_RTLD_MEMBER': 0,
  'HAVE_DECL_RTLD_NODELETE': 1,
  'HAVE_DECL_RTLD_NOLOAD': 1,
  'HAVE_DECL_RTLD_NOW': 1,
@@ -158,6 +243,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_DLOPEN': 1,
  'HAVE_DUP2': 1,
  'HAVE_DUP3': 0,
+ 'HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH': 0,
  'HAVE_DYNAMIC_LOADING': 1,
  'HAVE_ENDIAN_H': 0,
  'HAVE_EPOLL': 0,
@@ -166,6 +252,8 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_ERFC': 1,
  'HAVE_ERRNO_H': 1,
  'HAVE_EXECV': 1,
+ 'HAVE_EXPLICIT_BZERO': 0,
+ 'HAVE_EXPLICIT_MEMSET': 0,
  'HAVE_EXPM1': 1,
  'HAVE_FACCESSAT': 0,
  'HAVE_FCHDIR': 1,
@@ -176,6 +264,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_FCNTL_H': 1,
  'HAVE_FDATASYNC': 0,
  'HAVE_FDOPENDIR': 0,
+ 'HAVE_FDWALK': 0,
  'HAVE_FEXECVE': 0,
  'HAVE_FINITE': 1,
  'HAVE_FLOCK': 1,
@@ -203,6 +292,8 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_GETADDRINFO': 1,
  'HAVE_GETC_UNLOCKED': 1,
  'HAVE_GETENTROPY': 0,
+ 'HAVE_GETGRGID_R': 1,
+ 'HAVE_GETGRNAM_R': 1,
  'HAVE_GETGROUPLIST': 1,
  'HAVE_GETGROUPS': 1,
  'HAVE_GETHOSTBYNAME': 1,
@@ -221,6 +312,8 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_GETPID': 1,
  'HAVE_GETPRIORITY': 1,
  'HAVE_GETPWENT': 1,
+ 'HAVE_GETPWNAM_R': 1,
+ 'HAVE_GETPWUID_R': 1,
  'HAVE_GETRANDOM': 0,
  'HAVE_GETRANDOM_SYSCALL': 0,
  'HAVE_GETRESGID': 0,
@@ -266,18 +359,22 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_LINUX_CAN_H': 0,
  'HAVE_LINUX_CAN_RAW_FD_FRAMES': 0,
  'HAVE_LINUX_CAN_RAW_H': 0,
+ 'HAVE_LINUX_MEMFD_H': 0,
  'HAVE_LINUX_NETLINK_H': 0,
+ 'HAVE_LINUX_QRTR_H': 0,
  'HAVE_LINUX_RANDOM_H': 0,
  'HAVE_LINUX_TIPC_H': 0,
+ 'HAVE_LINUX_VM_SOCKETS_H': 0,
  'HAVE_LOCKF': 1,
  'HAVE_LOG1P': 1,
  'HAVE_LOG2': 1,
  'HAVE_LONG_DOUBLE': 1,
  'HAVE_LSTAT': 1,
  'HAVE_LUTIMES': 1,
+ 'HAVE_MADVISE': 1,
  'HAVE_MAKEDEV': 1,
  'HAVE_MBRTOWC': 1,
- 'HAVE_MEMMOVE': 1,
+ 'HAVE_MEMFD_CREATE': 0,
  'HAVE_MEMORY_H': 1,
  'HAVE_MEMRCHR': 0,
  'HAVE_MKDIRAT': 0,
@@ -303,12 +400,17 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_POLL_H': 1,
  'HAVE_POSIX_FADVISE': 0,
  'HAVE_POSIX_FALLOCATE': 0,
+ 'HAVE_POSIX_SPAWN': 1,
+ 'HAVE_POSIX_SPAWNP': 1,
  'HAVE_PREAD': 1,
+ 'HAVE_PREADV': 0,
+ 'HAVE_PREADV2': 0,
  'HAVE_PRLIMIT': 0,
  'HAVE_PROCESS_H': 0,
  'HAVE_PROTOTYPES': 1,
- 'HAVE_PTHREAD_ATFORK': 1,
+ 'HAVE_PTHREAD_CONDATTR_SETCLOCK': 0,
  'HAVE_PTHREAD_DESTRUCTOR': 0,
+ 'HAVE_PTHREAD_GETCPUCLOCKID': 0,
  'HAVE_PTHREAD_H': 1,
  'HAVE_PTHREAD_INIT': 0,
  'HAVE_PTHREAD_KILL': 1,
@@ -316,28 +418,29 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_PTY_H': 0,
  'HAVE_PUTENV': 1,
  'HAVE_PWRITE': 1,
+ 'HAVE_PWRITEV': 0,
+ 'HAVE_PWRITEV2': 0,
  'HAVE_READLINK': 1,
  'HAVE_READLINKAT': 0,
  'HAVE_READV': 1,
  'HAVE_REALPATH': 1,
  'HAVE_RENAMEAT': 0,
  'HAVE_RL_APPEND_HISTORY': 1,
- 'HAVE_RL_CALLBACK': 1,
- 'HAVE_RL_CATCH_SIGNAL': 0,
+ 'HAVE_RL_CATCH_SIGNAL': 1,
  'HAVE_RL_COMPLETION_APPEND_CHARACTER': 1,
  'HAVE_RL_COMPLETION_DISPLAY_MATCHES_HOOK': 1,
  'HAVE_RL_COMPLETION_MATCHES': 1,
- 'HAVE_RL_COMPLETION_SUPPRESS_APPEND': 0,
+ 'HAVE_RL_COMPLETION_SUPPRESS_APPEND': 1,
  'HAVE_RL_PRE_INPUT_HOOK': 1,
  'HAVE_RL_RESIZE_TERMINAL': 1,
  'HAVE_ROUND': 1,
+ 'HAVE_RTPSPAWN': 0,
  'HAVE_SCHED_GET_PRIORITY_MAX': 1,
  'HAVE_SCHED_H': 1,
  'HAVE_SCHED_RR_GET_INTERVAL': 0,
  'HAVE_SCHED_SETAFFINITY': 0,
  'HAVE_SCHED_SETPARAM': 0,
  'HAVE_SCHED_SETSCHEDULER': 0,
- 'HAVE_SELECT': 1,
  'HAVE_SEM_GETVALUE': 1,
  'HAVE_SEM_OPEN': 1,
  'HAVE_SEM_TIMEDWAIT': 0,
@@ -361,8 +464,12 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_SETUID': 1,
  'HAVE_SETVBUF': 1,
  'HAVE_SHADOW_H': 0,
+ 'HAVE_SHM_OPEN': 1,
+ 'HAVE_SHM_UNLINK': 1,
  'HAVE_SIGACTION': 1,
  'HAVE_SIGALTSTACK': 1,
+ 'HAVE_SIGFILLSET': 1,
+ 'HAVE_SIGINFO_T_SI_BAND': 1,
  'HAVE_SIGINTERRUPT': 1,
  'HAVE_SIGNAL_H': 1,
  'HAVE_SIGPENDING': 1,
@@ -383,13 +490,14 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_STDARG_PROTOTYPES': 1,
  'HAVE_STDINT_H': 1,
  'HAVE_STDLIB_H': 1,
- 'HAVE_STD_ATOMIC': 0,
+ 'HAVE_STD_ATOMIC': 1,
  'HAVE_STRDUP': 1,
  'HAVE_STRFTIME': 1,
  'HAVE_STRINGS_H': 1,
  'HAVE_STRING_H': 1,
  'HAVE_STRLCPY': 1,
  'HAVE_STROPTS_H': 0,
+ 'HAVE_STRSIGNAL': 1,
  'HAVE_STRUCT_PASSWD_PW_GECOS': 1,
  'HAVE_STRUCT_PASSWD_PW_PASSWD': 1,
  'HAVE_STRUCT_STAT_ST_BIRTHTIME': 1,
@@ -416,7 +524,9 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_SYS_KERN_CONTROL_H': 1,
  'HAVE_SYS_LOADAVG_H': 0,
  'HAVE_SYS_LOCK_H': 1,
+ 'HAVE_SYS_MEMFD_H': 0,
  'HAVE_SYS_MKDEV_H': 0,
+ 'HAVE_SYS_MMAN_H': 1,
  'HAVE_SYS_MODEM_H': 0,
  'HAVE_SYS_NDIR_H': 0,
  'HAVE_SYS_PARAM_H': 1,
@@ -429,6 +539,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_SYS_STATVFS_H': 1,
  'HAVE_SYS_STAT_H': 1,
  'HAVE_SYS_SYSCALL_H': 1,
+ 'HAVE_SYS_SYSMACROS_H': 0,
  'HAVE_SYS_SYS_DOMAIN_H': 1,
  'HAVE_SYS_TERMIO_H': 0,
  'HAVE_SYS_TIMES_H': 1,
@@ -463,6 +574,11 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_UTIMENSAT': 0,
  'HAVE_UTIMES': 1,
  'HAVE_UTIME_H': 1,
+ 'HAVE_UUID_CREATE': 0,
+ 'HAVE_UUID_ENC_BE': 0,
+ 'HAVE_UUID_GENERATE_TIME_SAFE': 0,
+ 'HAVE_UUID_H': 0,
+ 'HAVE_UUID_UUID_H': 1,
  'HAVE_WAIT3': 1,
  'HAVE_WAIT4': 1,
  'HAVE_WAITID': 1,
@@ -474,87 +590,102 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_WMEMCMP': 1,
  'HAVE_WORKING_TZSET': 1,
  'HAVE_WRITEV': 1,
+ 'HAVE_X509_VERIFY_PARAM_SET1_HOST': 1,
  'HAVE_ZLIB_COPY': 1,
  'HAVE__GETPTY': 0,
  'HOST_GNU_TYPE': 'x86_64-apple-darwin13.4.0',
- 'INCLDIRSTOMAKE': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include '
-                   '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include '
-                   '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include/python3.8 '
-                   '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include/python3.8',
- 'INCLUDEDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include',
- 'INCLUDEPY': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include/python3.8',
+ 'INCLDIRSTOMAKE': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include/python3.8 '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include/python3.8',
+ 'INCLUDEDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'INCLUDEPY': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include/python3.8',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
  'INSTALL_SCRIPT': '/usr/bin/install -c',
- 'INSTALL_SHARED': '/usr/bin/install -c -m 555',
- 'INSTSONAME': 'libpython3.8.dylib',
+ 'INSTALL_SHARED': '/usr/bin/install -c -m 755',
+ 'INSTSONAME': 'libpython3.8.a',
  'IO_H': 'Modules/_io/_iomodule.h',
  'IO_OBJS': '\\',
- 'LDCXXSHARED': 'g++ -bundle -undefined dynamic_lookup',
- 'LDFLAGS': '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-            '-arch x86_64 '
-            '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-            '-arch x86_64',
- 'LDLAST': '',
- 'LDLIBRARY': 'libpython3.8.dylib',
+ 'LDCXXSHARED': 'clang++ -bundle -undefined '
+                'dynamic_lookup',
+ 'LDFLAGS': ''
+            ''
+            ''
+            '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+            '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+            ''
+            ''
+            ''
+            '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+            '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
+ 'LDLIBRARY': 'libpython3.8.a',
  'LDLIBRARYDIR': '',
- 'LDSHARED': 'gcc -bundle -undefined dynamic_lookup '
-             '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-             '-arch x86_64 '
-             '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-             '-arch x86_64',
+ 'LDSHARED': 'clang -bundle -undefined '
+             'dynamic_lookup '
+             ''
+             ''
+             '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+             '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+             ''
+             ''
+             ''
+             '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+             '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
  'LDVERSION': '3.8',
  'LIBC': '',
- 'LIBDEST': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8',
- 'LIBDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib',
- 'LIBFFI_INCLUDEDIR': '',
+ 'LIBDEST': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8',
+ 'LIBDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
+ 'LIBFFI_INCLUDEDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
  'LIBM': '',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/pkgconfig',
- 'LIBPL': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8/config-3.8-darwin',
+ 'LIBPC': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/pkgconfig',
+ 'LIBPL': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8/config-3.8-darwin',
+ 'LIBPYTHON': '',
  'LIBRARY': 'libpython3.8.a',
  'LIBRARY_OBJS': '\\',
  'LIBRARY_OBJS_OMIT_FROZEN': '\\',
- 'LIBS': '-ldl  -framework CoreFoundation',
+ 'LIBS': '-ldl   -framework CoreFoundation',
  'LIBSUBDIRS': 'tkinter tkinter/test tkinter/test/test_tkinter \\',
- 'LINKCC': 'gcc',
+ 'LINKCC': 'clang',
  'LINKFORSHARED': '-Wl,-stack_size,1000000  -framework CoreFoundation',
  'LIPO_32BIT_FLAGS': '',
+ 'LIPO_INTEL64_FLAGS': '',
  'LLVM_PROF_ERR': 'no',
  'LLVM_PROF_FILE': 'LLVM_PROFILE_FILE="code-%p.profclangr"',
- 'LLVM_PROF_MERGER': '/usr/bin/xcrun llvm-profdata merge '
-                     '-output=code.profclangd *.profclangr',
+ 'LLVM_PROF_MERGER': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/_build_env/bin/llvm-profdata '
+                     'merge -output=code.profclangd *.profclangr',
  'LN': 'ln',
  'LOCALMODLIBS': '',
- 'LOG1P_DROPS_ZERO_SIGN': 0,
  'MACHDEP': 'darwin',
- 'MACHDEPPATH': ':',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/python3.8',
+ 'MACHDESTLIB': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/python3.8',
  'MACOSX_DEPLOYMENT_TARGET': '10.9',
- 'MAINCC': 'gcc',
+ 'MAINCC': 'clang',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
- 'MAKESETUP': './Modules/makesetup',
- 'MANDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/share/man',
- 'MKDIR_P': './install-sh -c -d',
+ 'MAKESETUP': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Modules/makesetup',
+ 'MANDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/share/man',
+ 'MKDIR_P': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/install-sh '
+            '-c -d',
+ 'MODBUILT_NAMES': 'posix  errno  pwd  _sre  _codecs  _weakref  _functools  '
+                   '_operator  _collections  _abc  itertools  atexit  _signal  '
+                   '_stat  time  _thread  _locale  _io  faulthandler  '
+                   '_tracemalloc  _symtable  xxsubtype',
+ 'MODDISABLED_NAMES': '',
  'MODLIBS': '',
- 'MODNAMES': '_thread posix errno pwd _sre _codecs _weakref _functools '
-             '_operator _collections itertools atexit _signal _stat time '
-             '_locale _io zipimport faulthandler _tracemalloc _symtable '
-             'xxsubtype',
- 'MODOBJS': 'Modules/_threadmodule.o  Modules/posixmodule.o  '
-            'Modules/errnomodule.o  Modules/pwdmodule.o  Modules/_sre.o  '
-            'Modules/_codecsmodule.o  Modules/_weakref.o  '
-            'Modules/_functoolsmodule.o  Modules/_operator.o  '
-            'Modules/_collectionsmodule.o  Modules/itertoolsmodule.o  '
+ 'MODOBJS': 'Modules/posixmodule.o  Modules/errnomodule.o  '
+            'Modules/pwdmodule.o  Modules/_sre.o  Modules/_codecsmodule.o  '
+            'Modules/_weakref.o  Modules/_functoolsmodule.o  '
+            'Modules/_operator.o  Modules/_collectionsmodule.o  '
+            'Modules/_abc.o  Modules/itertoolsmodule.o  '
             'Modules/atexitmodule.o  Modules/signalmodule.o  Modules/_stat.o  '
-            'Modules/timemodule.o  Modules/_localemodule.o  '
-            'Modules/_iomodule.o Modules/iobase.o Modules/fileio.o '
-            'Modules/bytesio.o Modules/bufferedio.o Modules/textio.o '
-            'Modules/stringio.o  Modules/zipimport.o  Modules/faulthandler.o  '
+            'Modules/timemodule.o  Modules/_threadmodule.o  '
+            'Modules/_localemodule.o  Modules/_iomodule.o Modules/iobase.o '
+            'Modules/fileio.o Modules/bytesio.o Modules/bufferedio.o '
+            'Modules/textio.o Modules/stringio.o  Modules/faulthandler.o  '
             'Modules/_tracemalloc.o Modules/hashtable.o  '
             'Modules/symtablemodule.o  Modules/xxsubtype.o',
  'MODULE_OBJS': '\\',
@@ -563,7 +694,10 @@ build_time_vars = {'ABIFLAGS': '',
  'MVWDELCH_IS_EXPRESSION': 1,
  'NO_AS_NEEDED': '',
  'OBJECT_OBJS': '\\',
- 'OPT': '-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes',
+ 'OPENSSL_INCLUDES': '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'OPENSSL_LDFLAGS': '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
+ 'OPENSSL_LIBS': '-lssl -lcrypto',
+ 'OPT': '-DNDEBUG -fwrapv -O2 -Wall',
  'OTHER_LIBTOOL_OPT': '',
  'PACKAGE_BUGREPORT': 0,
  'PACKAGE_NAME': 0,
@@ -573,15 +707,12 @@ build_time_vars = {'ABIFLAGS': '',
  'PACKAGE_VERSION': 0,
  'PARSER_HEADERS': '\\',
  'PARSER_OBJS': '\\ Parser/myreadline.o Parser/parsetok.o Parser/tokenizer.o',
- 'PGEN': 'Parser/pgen',
- 'PGENOBJS': '\\ \\',
- 'PGOBJS': '\\',
  'PGO_PROF_GEN_FLAG': '-fprofile-instr-generate',
  'PGO_PROF_USE_FLAG': '-fprofile-instr-use=code.profclangd',
- 'PLATDIR': '',
  'POBJS': '\\',
  'POSIX_SEMAPHORES_NOT_ENABLED': 0,
- 'PROFILE_TASK': '-m test.regrtest --pgo',
+ 'PROFILE_TASK': '-m test --pgo',
+ 'PTHREAD_KEY_T_IS_COMPATIBLE_WITH_INT': 0,
  'PTHREAD_SYSTEM_SCHED_SUPPORTED': 1,
  'PURIFY': '',
  'PY3LIBRARY': '',
@@ -591,48 +722,207 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHONFRAMEWORKDIR': 'no-framework',
  'PYTHONFRAMEWORKINSTALLDIR': '',
  'PYTHONFRAMEWORKPREFIX': '',
- 'PYTHONPATH': ':',
+ 'PYTHONPATH': '',
  'PYTHON_FOR_BUILD': './python.exe -E',
- 'PYTHON_FOR_REGEN': 'python',
+ 'PYTHON_FOR_REGEN': '',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
+ 'PY_BUILD_ENVIRON': '',
+ 'PY_BUILTIN_MODULE_CFLAGS': '-Wno-unused-result -Wsign-compare '
+                             '-Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall '
+                             ''
+                             ''
+                             ''
+                             '-fPIC  '
+                             '-O2  -isystem '
+                             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             ''
+                             ''
+                             ''
+                             ''
+                             ''
+                             '-fPIC  '
+                             '-O2  -isystem '
+                             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             ''
+                             ''
+                             '-Wl,-export_dynamic -g -std=c99 '
+                             '-Wextra -Wno-unused-result -Wno-unused-parameter '
+                             '-Wno-missing-field-initializers '
+                             '-Wstrict-prototypes '
+                             '-Werror=implicit-function-declaration '
+                             '-fprofile-instr-use=code.profclangd '
+                             '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include/internal '
+                             '-IObjects -IInclude -IPython -I. '
+                             '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include '
+                             ''
+                             ''
+                             '-D_FORTIFY_SOURCE=2 -isystem '
+                             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             '-mmacosx-version-min=10.9 '
+                             '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             ''
+                             ''
+                             '-D_FORTIFY_SOURCE=2 -isystem '
+                             '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             '-mmacosx-version-min=10.9 '
+                             '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                             '-DPy_BUILD_CORE_BUILTIN',
  'PY_CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG '
-              '-g -fwrapv -O3 -Wall -Wstrict-prototypes '
-              '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-              '-arch x86_64 '
-              '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-              '-arch x86_64',
- 'PY_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
-                     '-Wno-unused-parameter -Wno-missing-field-initializers',
+              '-fwrapv -O2 -Wall '
+              ''
+              '-fPIC '
+              '-O2  -isystem '
+              '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+              ''
+              ''
+              ''
+              ''
+              '-fPIC '
+              '-O2  -isystem '
+              '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+              ''
+              ''
+              '',
+ 'PY_CFLAGS_NODIST': '-Wl,-export_dynamic -g -std=c99 -Wextra '
+                     '-Wno-unused-result -Wno-unused-parameter '
+                     '-Wno-missing-field-initializers -Wstrict-prototypes '
+                     '-Werror=implicit-function-declaration '
+                     '-fprofile-instr-use=code.profclangd '
+                     '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include/internal',
+ 'PY_COERCE_C_LOCALE': 1,
  'PY_CORE_CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code '
-                   '-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes '
-                   '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-                   '-arch x86_64 '
-                   '-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include  '
-                   '-arch x86_64 -std=c99 -Wextra -Wno-unused-result '
-                   '-Wno-unused-parameter -Wno-missing-field-initializers -I. '
-                   '-I./Include  -DPy_BUILD_CORE',
- 'PY_CPPFLAGS': '-I. -I./Include',
+                   '-DNDEBUG -fwrapv -O2 -Wall '
+                   ''
+                   '-fPIC '
+                   '-O2  -isystem '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   ''
+                   ''
+                   ''
+                   ''
+                   '-fPIC '
+                   '-O2  -isystem '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   ''
+                   ''
+                   '-Wl,-export_dynamic -g -std=c99 -Wextra '
+                   '-Wno-unused-result -Wno-unused-parameter '
+                   '-Wno-missing-field-initializers -Wstrict-prototypes '
+                   '-Werror=implicit-function-declaration '
+                   '-fprofile-instr-use=code.profclangd '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include/internal '
+                   '-IObjects -IInclude -IPython -I. '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include '
+                   ''
+                   ''
+                   '-D_FORTIFY_SOURCE=2 -isystem '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   '-mmacosx-version-min=10.9 '
+                   '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   ''
+                   ''
+                   '-D_FORTIFY_SOURCE=2 -isystem '
+                   '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   '-mmacosx-version-min=10.9 '
+                   '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                   '-DPy_BUILD_CORE',
+ 'PY_CORE_LDFLAGS': ''
+                    ''
+                    ''
+                    ''
+                    '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                    '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                    ''
+                    ''
+                    ''
+                    ''
+                    '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                    '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+                    '-Wl,-export_dynamic -g',
+ 'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
+                '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include '
+                ''
+                ''
+                '-D_FORTIFY_SOURCE=2 -isystem '
+                '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                '-mmacosx-version-min=10.9 '
+                '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                ''
+                ''
+                '-D_FORTIFY_SOURCE=2 -isystem '
+                '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                '-mmacosx-version-min=10.9 '
+                '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
  'PY_FORMAT_SIZE_T': '"z"',
- 'PY_LDFLAGS': '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-               '-arch x86_64 '
-               '-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib  '
-               '-arch x86_64',
+ 'PY_LDFLAGS': ''
+               ''
+               ''
+               ''
+               '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+               '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+               ''
+               ''
+               ''
+               ''
+               '-Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+               '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
+ 'PY_LDFLAGS_NODIST': '-Wl,-export_dynamic -g',
+ 'PY_SSL_DEFAULT_CIPHERS': 1,
+ 'PY_SSL_DEFAULT_CIPHER_STRING': 0,
+ 'PY_STDMODULE_CFLAGS': '-Wno-unused-result -Wsign-compare -Wunreachable-code '
+                        '-DNDEBUG -fwrapv -O2 -Wall '
+                        ''
+                        ''
+                        '-fPIC   -O2  '
+                        '-isystem '
+                        '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                        ''
+                        ''
+                        ''
+                        ''
+                        ''
+                        '-fPIC   -O2  '
+                        '-isystem '
+                        '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                        ''
+                        ''
+                        '-Wl,-export_dynamic -g -std=c99 -Wextra '
+                        '-Wno-unused-result -Wno-unused-parameter '
+                        '-Wno-missing-field-initializers -Wstrict-prototypes '
+                        '-Werror=implicit-function-declaration '
+                        '-fprofile-instr-use=code.profclangd '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include/internal '
+                        '-IObjects -IInclude -IPython -I. '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Include '
+                        ''
+                        ''
+                        '-D_FORTIFY_SOURCE=2 -isystem '
+                        '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                        '-mmacosx-version-min=10.9 '
+                        '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                        ''
+                        ''
+                        '-D_FORTIFY_SOURCE=2 -isystem '
+                        '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include '
+                        '-mmacosx-version-min=10.9 '
+                        '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 0,
  'Py_HASH_ALGORITHM': 0,
+ 'Py_TRACE_REFS': 0,
  'QUICKTESTOPTS': '-x test_subprocess test_io test_lib2to3 \\',
- 'RANLIB': 'ranlib',
  'READELF': ':',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
- 'RUNSHARED': 'DYLD_LIBRARY_PATH=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12',
- 'SCRIPTDIR': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib',
+ 'RUNSHARED': '',
+ 'SCRIPTDIR': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib',
  'SETPGRP_HAVE_ARG': 0,
  'SGI_ABI': '',
  'SHELL': '/bin/sh',
- 'SHLIBS': '-ldl  -framework CoreFoundation',
+ 'SHLIBS': '-ldl   -framework CoreFoundation',
  'SHLIB_SUFFIX': '.so',
+ 'SHM_NEEDS_LIBRT': 0,
  'SIGNED_RIGHT_SHIFT_ZERO_FILLS': 0,
  'SITEPATH': '',
  'SIZEOF_DOUBLE': 8,
@@ -644,6 +934,7 @@ build_time_vars = {'ABIFLAGS': '',
  'SIZEOF_LONG_LONG': 8,
  'SIZEOF_OFF_T': 8,
  'SIZEOF_PID_T': 4,
+ 'SIZEOF_PTHREAD_KEY_T': 8,
  'SIZEOF_PTHREAD_T': 8,
  'SIZEOF_SHORT': 2,
  'SIZEOF_SIZE_T': 8,
@@ -653,8 +944,8 @@ build_time_vars = {'ABIFLAGS': '',
  'SIZEOF_WCHAR_T': 4,
  'SIZEOF__BOOL': 1,
  'SOABI': 'cpython-38-darwin',
- 'SRCDIRS': 'Parser Grammar Objects Python Modules Mac Programs',
- 'SRC_GDB_HOOKS': './Tools/gdb/libpython.py',
+ 'SRCDIRS': 'Parser Objects Python Modules Modules/_io Programs',
+ 'SRC_GDB_HOOKS': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Tools/gdb/libpython.py',
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
  'STRIPFLAG': '-s',
@@ -662,41 +953,39 @@ build_time_vars = {'ABIFLAGS': '',
  'SUBDIRSTOO': 'Include Lib Misc',
  'SYSLIBS': '',
  'SYS_SELECT_WITH_SYS_TIME': 1,
- 'TANH_PRESERVES_ZERO_SIGN': 1,
- 'TCLTK_INCLUDES': '',
- 'TCLTK_LIBS': '',
+ 'TCLTK_INCLUDES': '-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include',
+ 'TCLTK_LIBS': '-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib '
+               '-ltcl8.6 -ltk8.6',
  'TESTOPTS': '',
  'TESTPATH': '',
- 'TESTPYTHON': 'DYLD_LIBRARY_PATH=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12 '
-               './python.exe',
+ 'TESTPYTHON': './python.exe',
  'TESTPYTHONOPTS': '',
- 'TESTRUNNER': 'DYLD_LIBRARY_PATH=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12 '
-               './python.exe ./Tools/scripts/run_tests.py',
+ 'TESTRUNNER': './python.exe '
+               '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Tools/scripts/run_tests.py',
  'TESTTIMEOUT': 1200,
- 'THREADOBJ': 'Python/thread.o',
  'TIMEMODULE_LIB': 0,
  'TIME_WITH_SYS_TIME': 1,
  'TM_IN_SYS_TIME': 0,
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
- 'USE_COMPUTED_GOTOS': 0,
- 'USE_INLINE': 1,
+ 'UPDATE_FILE': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/Tools/scripts/update_file.py',
+ 'USE_COMPUTED_GOTOS': 1,
  'VERSION': '3.8',
- 'WANT_SIGFPE_HANDLER': 0,
- 'WINDOW_HAS_FLAGS': 0,
+ 'VPATH': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work',
+ 'WINDOW_HAS_FLAGS': 1,
+ 'WITH_DECIMAL_CONTEXTVAR': 1,
  'WITH_DOC_STRINGS': 1,
  'WITH_DTRACE': 0,
  'WITH_DYLD': 1,
  'WITH_LIBINTL': 0,
  'WITH_NEXT_FRAMEWORK': 0,
  'WITH_PYMALLOC': 1,
- 'WITH_THREAD': 1,
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12',
- 'abs_srcdir': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/../work/Python-3.8.12',
- 'datarootdir': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/share',
- 'exec_prefix': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv',
- 'prefix': '/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv',
- 'srcdir': '.'}
+ 'abs_builddir': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/build-static',
+ 'abs_srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work',
+ 'datarootdir': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/share',
+ 'exec_prefix': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv',
+ 'prefix': '/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv',
+ 'srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work'}

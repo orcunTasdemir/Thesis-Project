@@ -1,5 +1,5 @@
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
-exec_prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
+exec_prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 libdir=${prefix}/lib
 includedir=${prefix}/include
 

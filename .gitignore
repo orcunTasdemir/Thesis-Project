@@ -6,9 +6,9 @@ bin-release/
 
 # Other files and folders
 .settings/
-.data/
-.__pycache__/
-.games/
+data/
+__pycache__/
+games/
 
 .vscode/*
 !.vscode/settings.json

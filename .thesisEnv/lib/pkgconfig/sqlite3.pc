@@ -1,6 +1,6 @@
 # Package Information for pkg-config
 
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

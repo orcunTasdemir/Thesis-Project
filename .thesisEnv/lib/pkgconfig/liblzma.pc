@@ -5,10 +5,10 @@
 # You can do whatever you want with this file.
 #
 
-prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
-exec_prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
-libdir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
-includedir=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
+prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
+exec_prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
+libdir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib
+includedir=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
 
 Name: liblzma
 Description: General purpose data compression library

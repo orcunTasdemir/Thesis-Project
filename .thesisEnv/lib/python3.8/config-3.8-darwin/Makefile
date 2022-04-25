@@ -28,17 +28,17 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
 VERSION=	3.8
-srcdir=		/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work
-VPATH=		/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work
-abs_srcdir=	/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work
-abs_builddir=	/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work/build-static
+srcdir=		/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work
+VPATH=		/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work
+abs_srcdir=	/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work
+abs_builddir=	/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/build-static
 
 
 CC=		x86_64-apple-darwin13.4.0-clang
 CXX=		x86_64-apple-darwin13.4.0-clang++
 MAINCC=		$(CC)
 LINKCC=		$(PURIFY) $(MAINCC)
-AR=		/Users/runner/miniforge3/conda-bld/python-split_1643583870428/_build_env/bin/x86_64-apple-darwin13.4.0-llvm-ar
+AR=		/Users/runner/miniforge3/conda-bld/python-split_1648187675337/_build_env/bin/x86_64-apple-darwin13.4.0-llvm-ar
 READELF=	:
 SOABI=		cpython-38-darwin
 LDVERSION=	$(VERSION)$(ABIFLAGS)
@@ -48,7 +48,7 @@ GITTAG=
 GITBRANCH=	
 PGO_PROF_GEN_FLAG=-fprofile-instr-generate
 PGO_PROF_USE_FLAG=-fprofile-instr-use=code.profclangd
-LLVM_PROF_MERGER=/Users/runner/miniforge3/conda-bld/python-split_1643583870428/_build_env/bin/llvm-profdata merge -output=code.profclangd *.profclangr
+LLVM_PROF_MERGER=/Users/runner/miniforge3/conda-bld/python-split_1648187675337/_build_env/bin/llvm-profdata merge -output=code.profclangd *.profclangr
 LLVM_PROF_FILE=LLVM_PROFILE_FILE="code-%p.profclangr"
 LLVM_PROF_ERR=no
 DTRACE=         
@@ -73,7 +73,7 @@ INSTALL_DATA=	${INSTALL} -m 644
 # rather than figuring out exactly which, we always give them executable mode.
 INSTALL_SHARED= ${INSTALL} -m 755
 
-MKDIR_P=	/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work/install-sh -c -d
+MKDIR_P=	/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work/install-sh -c -d
 
 MAKESETUP=      $(srcdir)/Modules/makesetup
 
@@ -81,7 +81,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -fwrapv -O2 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare -Wunreachable-code
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work=/usr/local/src/conda/python-3.8.12 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv=/usr/local/src/conda-prefix 
+CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work=/usr/local/src/conda/python-3.8.13 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv=/usr/local/src/conda-prefix 
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -90,8 +90,8 @@ CONFIGURE_CFLAGS_NODIST=  -Wl,-export_dynamic -g -std=c99 -Wextra -Wno-unused-re
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
 CONFIGURE_LDFLAGS_NODIST=  -Wl,-export_dynamic -g
-CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 -I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
-CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
+CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 -I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
+CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -130,7 +130,7 @@ MULTIARCH=	darwin
 MULTIARCH_CPPFLAGS = -DMULTIARCH=\"darwin\"
 
 # Install prefix for architecture-independent files
-prefix=		/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv
+prefix=		/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -196,9 +196,9 @@ RUNSHARED=
 ENSUREPIP=      no
 
 # OpenSSL options for setup.py so sysconfig can pick up AC_SUBST() vars.
-OPENSSL_INCLUDES=-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
+OPENSSL_INCLUDES=-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
 OPENSSL_LIBS=-lssl -lcrypto
-OPENSSL_LDFLAGS=-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib
+OPENSSL_LDFLAGS=-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -207,7 +207,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv' '--build=x86_64-apple-darwin13.4.0' '--host=x86_64-apple-darwin13.4.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include' '--with-tcltk-libs=-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltcl8.6 -ltk8.6' '--with-lto' '--enable-optimizations' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1643583870428/_build_env/x86_64-apple-darwin13.4.0/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo-extended' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=x86_64-apple-darwin13.4.0' 'MACHDEP=darwin' 'CC=x86_64-apple-darwin13.4.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1643583870428/work=/usr/local/src/conda/python-3.8.12 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv=/usr/local/src/conda-prefix ' 'LDFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 -I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include' 'PKG_CONFIG_PATH=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv' '--build=x86_64-apple-darwin13.4.0' '--host=x86_64-apple-darwin13.4.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include' '--with-tcltk-libs=-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltcl8.6 -ltk8.6' '--with-lto' '--enable-optimizations' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1648187675337/_build_env/x86_64-apple-darwin13.4.0/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=x86_64-apple-darwin13.4.0' 'MACHDEP=darwin' 'CC=x86_64-apple-darwin13.4.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1648187675337/work=/usr/local/src/conda/python-3.8.13 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv=/usr/local/src/conda-prefix ' 'LDFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_12.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 -I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include' 'PKG_CONFIG_PATH=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -247,8 +247,8 @@ LIBOBJS=
 PYTHON=		python$(EXE)
 BUILDPYTHON=	python$(BUILDEXE)
 
-PYTHON_FOR_REGEN=python3
-UPDATE_FILE=python3 $(srcdir)/Tools/scripts/update_file.py
+PYTHON_FOR_REGEN?=python3
+UPDATE_FILE=$(PYTHON_FOR_REGEN) $(srcdir)/Tools/scripts/update_file.py
 PY_BUILD_ENVIRON=
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=darwin-x86_64
@@ -256,14 +256,14 @@ BUILD_GNU_TYPE=	x86_64-apple-darwin13.4.0
 HOST_GNU_TYPE=	x86_64-apple-darwin13.4.0
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
-TCLTK_INCLUDES=	-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
-TCLTK_LIBS=	-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltcl8.6 -ltk8.6
+TCLTK_INCLUDES=	-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
+TCLTK_LIBS=	-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltcl8.6 -ltk8.6
 
 # The task to run while instrumented when building the profile-opt target.
 # To speed up profile generation, we don't run the full unit test suite
 # by default. The default is "-m test --pgo". To run more tests, use
 # PROFILE_TASK="-m test --pgo-extended"
-PROFILE_TASK=	-m test --pgo-extended
+PROFILE_TASK=	-m test --pgo
 
 # report files for gcov / lcov coverage report
 COVERAGE_INFO=	$(abs_builddir)/coverage.info
@@ -305,7 +305,7 @@ IO_OBJS=	\
 
 ##########################################################################
 
-LIBFFI_INCLUDEDIR=	/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include
+LIBFFI_INCLUDEDIR=	/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include
 
 ##########################################################################
 # Parser

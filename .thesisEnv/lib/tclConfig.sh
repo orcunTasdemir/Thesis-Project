@@ -44,11 +44,11 @@ TCL_LIBS=' -lz  -lpthread -framework CoreFoundation '
 
 # Top-level directory in which Tcl's platform-independent files are
 # installed.
-TCL_PREFIX='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv'
+TCL_PREFIX='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv'
 
 # Top-level directory in which Tcl's platform-specific files (e.g.
 # executables) are installed.
-TCL_EXEC_PREFIX='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv'
+TCL_EXEC_PREFIX='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv'
 
 # Flags to pass to cc when compiling the components of a shared library:
 TCL_SHLIB_CFLAGS='-fno-common'
@@ -57,7 +57,7 @@ TCL_SHLIB_CFLAGS='-fno-common'
 TCL_CFLAGS_WARNING='-Wall -Wpointer-arith'
 
 # Extra flags to pass to cc:
-TCL_EXTRA_CFLAGS='-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/tk_1645032364843/work=/usr/local/src/conda/tk-8.6.12 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv=/usr/local/src/conda-prefix -pipe  -arch x86_64 -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 '
+TCL_EXTRA_CFLAGS='-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/tk_1645032364843/work=/usr/local/src/conda/tk-8.6.12 -fdebug-prefix-map=/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv=/usr/local/src/conda-prefix -pipe  -arch x86_64 -D_FORTIFY_SOURCE=2 -isystem /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include -mmacosx-version-min=10.9 '
 
 # Base command to use for combining object files into a shared library:
 TCL_SHLIB_LD='${CC} -dynamiclib ${CFLAGS} ${LDFLAGS} -Wl,-single_module'
@@ -79,7 +79,7 @@ TCL_DL_LIBS=''
 
 # Flags to pass to the compiler when linking object files into
 # an executable tclsh or tcltest binary.
-TCL_LD_FLAGS='-Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -headerpad_max_install_names -Wl,-search_paths_first '
+TCL_LD_FLAGS='-Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -headerpad_max_install_names -Wl,-search_paths_first '
 
 # Flags to pass to cc/ld, such as "-R /usr/local/tcl/lib", that tell the
 # run-time dynamic linker where to look for shared libraries such as
@@ -100,15 +100,15 @@ TCL_LIB_FLAG='-ltcl8.6'
 
 # String to pass to linker to pick up the Tcl library from its
 # build directory.
-TCL_BUILD_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltcl8.6'
+TCL_BUILD_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltcl8.6'
 
 # String to pass to linker to pick up the Tcl library from its
 # installed directory.
-TCL_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltcl8.6'
+TCL_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltcl8.6'
 
 # String to pass to the compiler so that an extension can
 # find installed Tcl headers.
-TCL_INCLUDE_SPEC='-I/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include'
+TCL_INCLUDE_SPEC='-I/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include'
 
 # Indicates whether a version numbers should be used in -l switches
 # ("ok" means it's safe to use switches like -ltcl7.5;  "nodots" means
@@ -135,12 +135,12 @@ TCL_UNSHARED_LIB_SUFFIX='${VERSION}.a'
 # different place than the directory containing the source files, this
 # points to the location of the sources, not the location where Tcl was
 # compiled.
-TCL_SRC_DIR='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/include'
+TCL_SRC_DIR='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/include'
 
 # List of standard directories in which to look for packages during
 # "package require" commands.  Contains the "prefix" directory plus also
 # the "exec_prefix" directory, if it is different.
-TCL_PACKAGE_PATH='{/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib} '
+TCL_PACKAGE_PATH='{/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib} '
 
 # Tcl supports stub.
 TCL_SUPPORTS_STUBS=1
@@ -153,17 +153,17 @@ TCL_STUB_LIB_FLAG='-ltclstub8.6'
 
 # String to pass to linker to pick up the Tcl stub library from its
 # build directory.
-TCL_BUILD_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltclstub8.6'
+TCL_BUILD_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltclstub8.6'
 
 # String to pass to linker to pick up the Tcl stub library from its
 # installed directory.
-TCL_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib -ltclstub8.6'
+TCL_STUB_LIB_SPEC='-L/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib -ltclstub8.6'
 
 # Path to the Tcl stub library in the build directory.
-TCL_BUILD_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/libtclstub8.6.a'
+TCL_BUILD_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/libtclstub8.6.a'
 
 # Path to the Tcl stub library in the install directory.
-TCL_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/libtclstub8.6.a'
+TCL_STUB_LIB_PATH='/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/libtclstub8.6.a'
 
 # Flag, 1: we built Tcl with threads enabled, 0 we didn't
 TCL_THREADS=1

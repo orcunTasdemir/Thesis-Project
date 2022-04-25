@@ -1,4 +1,4 @@
-#!/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/bin/python3.8
+#!/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/bin/python3.8
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in

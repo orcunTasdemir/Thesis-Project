@@ -10,7 +10,7 @@ set_property(TARGET openjp2 APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(openjp2 PROPERTIES
   IMPORTED_LINK_INTERFACE_LIBRARIES_NOCONFIG "m"
   IMPORTED_LOCATION_NOCONFIG "${_IMPORT_PREFIX}/lib/libopenjp2.2.4.0.dylib"
-  IMPORTED_SONAME_NOCONFIG "/Users/orcuntasdemir/Desktop/thesis/code/.thesisEnv/lib/libopenjp2.7.dylib"
+  IMPORTED_SONAME_NOCONFIG "/Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv/lib/libopenjp2.7.dylib"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS openjp2 )
