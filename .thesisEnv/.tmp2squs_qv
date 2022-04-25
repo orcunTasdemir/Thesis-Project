@@ -1,3 +1,0 @@
-eval "$(/opt/anaconda3/bin/conda shell.posix hook)"
-conda activate  /Users/orcuntasdemir/Desktop/vassar/thesis/code/.thesisEnv
-python /Users/orcuntasdemir/.vscode/extensions/ms-python.python-2022.4.0/pythonFiles/get_output_via_markers.py -m black --diff --quiet /Users/orcuntasdemir/Desktop/vassar/thesis/code/utils/Simulate.py.702aa404fec233d22656c293d7ea4cf3.tmp
