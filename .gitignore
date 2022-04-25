@@ -12,6 +12,7 @@ bin-release/
 data/
 __pycache__/
 games/
+notes
 
 .vscode/*
 !.vscode/settings.json
