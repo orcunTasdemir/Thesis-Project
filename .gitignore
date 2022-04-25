@@ -5,6 +5,8 @@ bin-release/
 [Bb]in/
 
 # Other files and folders
+.vscode/
+.ipynb_checkpoints
 .thesisEnv/
 .settings/
 data/
